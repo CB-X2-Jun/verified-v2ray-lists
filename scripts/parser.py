@@ -137,18 +137,35 @@ def build_node(
 
     node = Node(
         protocol=protocol,
-        address=parsed.hostname,
-        port=parsed.port,
+        address=getattr(
+            parsed,
+            "hostname",
+            "",
+        ) or "",
+        port=int(
+            getattr(
+                parsed,
+                "port",
+                0,
+            )
+        ),
         country=country,
         uri=uri,
     )
 
+
+    # IPv6 去掉 []
+    node.address = node.address.strip("[]")
+
+
     node.data = data
+
 
     node.warning = detect_warning(
         protocol,
         data,
     )
+
 
     return node
 
@@ -209,6 +226,9 @@ def parse_vless(uri, country):
 
         "spx":
             q.get("spx", ""),
+
+        "alpn":
+            q.get("alpn",""),
 
         "allowInsecure":
             q.get(
@@ -272,6 +292,9 @@ def parse_trojan(uri, country):
         "fp":
             q.get("fp", ""),
 
+        "alpn":
+            q.get("alpn",""),
+
         "allowInsecure":
             q.get(
                 "allowInsecure",
@@ -297,65 +320,167 @@ def parse_vmess(uri, country):
 
     encoded = body[len("vmess://"):]
 
+
     obj = json.loads(
         decode_base64(encoded)
     )
 
+
     if not alias:
-        alias = obj.get("ps", "")
+        alias = obj.get(
+            "ps",
+            "",
+        )
+
 
     class P:
         pass
 
+
     parsed = P()
 
-    parsed.hostname = obj["add"]
-    parsed.port = int(obj["port"])
+    parsed.hostname = obj.get(
+        "add",
+        "",
+    )
+
+    parsed.port = int(
+        obj.get(
+            "port",
+            0,
+        )
+    )
+
 
     data = {
 
         "id":
-            obj.get("id", ""),
+            obj.get(
+                "id",
+                "",
+            ),
 
-        "aid":
-            obj.get("aid", "0"),
 
         "security":
-            obj.get("tls", ""),
+            obj.get(
+                "tls",
+                "",
+            ),
+
+
+        "securityType":
+            obj.get(
+                "scy",
+                "auto",
+            ),
+
+
+        "alterId":
+            obj.get(
+                "aid",
+                "0",
+            ),
+
 
         "network":
-            obj.get("net", "tcp"),
+            obj.get(
+                "net",
+                "tcp",
+            ),
+
 
         "host":
-            obj.get("host", ""),
+            obj.get(
+                "host",
+                "",
+            ),
+
 
         "path":
-            obj.get("path", ""),
+            obj.get(
+                "path",
+                "",
+            ),
+
 
         "serviceName":
-            obj.get("serviceName", ""),
+            obj.get(
+                "serviceName",
+                "",
+            ),
+
 
         "authority":
-            obj.get("authority", ""),
+            obj.get(
+                "authority",
+                "",
+            ),
+
 
         "mode":
-            obj.get("mode", ""),
+            obj.get(
+                "mode",
+                "",
+            ),
+
 
         "sni":
-            obj.get("sni", ""),
+            obj.get(
+                "sni",
+                "",
+            ),
+
 
         "fp":
-            obj.get("fp", ""),
+            obj.get(
+                "fp",
+                "",
+            ),
+
+
+        "pbk":
+            obj.get(
+                "pbk",
+                "",
+            ),
+
+
+        "sid":
+            obj.get(
+                "sid",
+                "",
+            ),
+
+
+        "spx":
+            obj.get(
+                "spx",
+                "",
+            ),
+
+
+        "alpn":
+            obj.get(
+                "alpn",
+                "",
+            ),
+
 
         "allowInsecure":
             obj.get(
                 "allowInsecure",
-                obj.get("insecure", "0"),
+                obj.get(
+                    "insecure",
+                    "0",
+                ),
             ),
+
 
         "alias":
             alias,
+
     }
+
 
     return build_node(
         "vmess",
@@ -420,7 +545,34 @@ def parse_ss(uri, country):
             q.get("plugin", ""),
 
         "network":
-            "tcp",
+            q.get(
+                "type",
+                "tcp",
+            ),
+
+        "host":
+            q.get(
+                "host",
+                "",
+            ),
+
+        "path":
+            q.get(
+                "path",
+                "",
+            ),
+        
+        "serviceName":
+            q.get(
+                "serviceName",
+                "",
+            ),
+        
+        "security":
+            q.get(
+                "security",
+                "",
+            ),
 
         "allowInsecure":
             q.get(
@@ -453,7 +605,7 @@ def parse_hy2(uri, country):
     data = {
 
         "password":
-            parsed.username,
+            parsed.username or "",
 
         "sni":
             q.get("sni", ""),
@@ -463,6 +615,12 @@ def parse_hy2(uri, country):
 
         "obfs-password":
             q.get("obfs-password", ""),
+
+        "up":
+            q.get("up",""),
+
+        "down":
+            q.get("down",""),
 
         "allowInsecure":
             q.get(
@@ -475,7 +633,7 @@ def parse_hy2(uri, country):
     }
 
     return build_node(
-        "hy2",
+        "hysteria2",
         parsed,
         country,
         uri,
