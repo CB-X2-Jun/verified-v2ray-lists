@@ -1,0 +1,1339 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description"
+      content="人工入库并自动检测的 V2Ray 节点列表">
+
+<meta name="author"
+      content="CB-X2-Jun">
+
+<title>Verified V2Ray Lists</title>
+
+<link rel="stylesheet"
+href="https://lipis.github.io/flag-icons/css/flag-icons.min.css">
+
+<style>
+
+/*************************************************
+ *
+ *  Light Theme
+ *
+ *************************************************/
+
+:root{
+
+    --primary:#8b5cf6;
+    --primary-light:#f3edff;
+
+    --border:#ddd2ff;
+
+    --bg:#faf8ff;
+
+    --card:#ffffff;
+
+    --hover:#f8f3ff;
+
+    --text:#2f2f38;
+
+}
+
+/*************************************************
+ *
+ * Dark Theme
+ *
+ *************************************************/
+
+body.dark{
+
+    --primary:#b58dff;
+
+    --primary-light:#2b2143;
+
+    --border:#40315f;
+
+    --bg:#15111f;
+
+    --card:#1d1829;
+
+    --hover:#28203a;
+
+    --text:#ece9ff;
+
+}
+
+/*************************************************/
+
+*{
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    margin:0;
+
+    padding:24px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+
+    -apple-system,
+
+    BlinkMacSystemFont,
+
+    "Segoe UI",
+
+    sans-serif;
+
+}
+
+/*************************************************/
+
+h2{
+
+    margin-top:0;
+
+    color:var(--primary);
+
+}
+
+/*************************************************/
+
+.theme-toggle{
+
+    position:fixed;
+
+    top:18px;
+
+    right:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.theme-toggle input{
+
+    appearance:none;
+
+    width:42px;
+
+    height:22px;
+
+    border-radius:999px;
+
+    background:#bbb;
+
+    cursor:pointer;
+
+    position:relative;
+
+}
+
+.theme-toggle input::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    left:2px;
+
+    top:2px;
+
+    border-radius:50%;
+
+    background:white;
+
+    transition:.2s;
+
+}
+
+.theme-toggle input:checked{
+
+    background:var(--primary);
+
+}
+
+.theme-toggle input:checked::before{
+
+    transform:translateX(20px);
+
+}
+
+/*************************************************/
+
+#stats{
+
+    margin:10px 0 18px;
+
+    font-size:14px;
+
+}
+
+/*************************************************/
+
+.filter{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:28px;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border-radius:12px;
+
+    background:var(--card);
+
+    box-shadow:
+
+    0 4px 14px rgba(0,0,0,.05);
+
+}
+
+/*************************************************/
+
+.select-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+select{
+
+    border:1px solid var(--border);
+
+    background:var(--card);
+
+    color:var(--text);
+
+    padding:6px 8px;
+
+    border-radius:6px;
+
+}
+
+/*************************************************/
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:6px;
+
+}
+
+.tag{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:4px 10px;
+
+    border-radius:14px;
+
+    background:var(--primary-light);
+
+    font-size:13px;
+
+}
+
+.tag span:last-child{
+
+    cursor:pointer;
+
+}
+
+/*************************************************/
+
+.export-btn{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:8px;
+
+    padding:8px 14px;
+
+    cursor:pointer;
+
+}
+
+.export-btn:hover{
+
+    opacity:.92;
+
+}
+
+/*************************************************/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    background:var(--card);
+
+}
+
+th{
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+}
+
+th,td{
+
+    padding:10px;
+
+    border-bottom:1px solid var(--border);
+
+    text-align:left;
+
+}
+
+tr:hover td{
+
+    background:var(--hover);
+
+}
+
+/*************************************************/
+
+.country{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+/*************************************************/
+
+.alias{
+
+    max-width:160px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+.address{
+
+    max-width:220px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+/*************************************************/
+
+.copy-btn{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+/*************************************************/
+
+.warning{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:2px 8px;
+
+    border-radius:999px;
+
+    color:white;
+
+    font-size:12px;
+
+    margin:2px;
+
+}
+
+.warning.orange{
+
+    background:#d97706;
+
+}
+
+.warning.blue{
+
+    background:#2563eb;
+
+}
+
+.warning.red{
+
+    background:#dc2626;
+
+}
+
+.warning.purple{
+
+    background:#7c3aed;
+
+}
+
+/*************************************************/
+
+.bar-wrap{
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--border);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-top:4px;
+
+}
+
+.bar{
+
+    height:100%;
+
+}
+
+.bar.green{
+
+    background:#3cb371;
+
+}
+
+.bar.yellow{
+
+    background:#f0c24b;
+
+}
+
+.bar.red{
+
+    background:#e5533d;
+
+}
+
+/*************************************************/
+
+@media(max-width:900px){
+
+table{
+
+    font-size:13px;
+
+}
+
+body{
+
+    padding:10px;
+
+}
+
+.filter{
+
+    gap:14px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<label class="theme-toggle">
+
+☀️
+
+<input id="themeToggle" type="checkbox">
+
+🌙
+
+</label>
+
+<h2>🚀 Verified V2Ray Lists</h2>
+
+<div style="margin-bottom:14px">
+
+人工入库并自动检测的 V2Ray 节点列表<br>
+
+支持 VLESS / VMESS / Trojan / Shadowsocks / Hysteria2
+
+</div>
+
+<div id="stats">
+
+正在加载……
+
+</div>
+
+<div class="filter">
+
+<div class="select-box">
+
+国家：
+
+<select id="countrySelect">
+
+<option value="">选择国家</option>
+
+</select>
+
+<div id="countryTags" class="tags"></div>
+
+</div>
+
+<div class="select-box">
+
+协议：
+
+<select id="protocolSelect">
+
+<option value="">选择协议</option>
+
+<option value="vless">VLESS</option>
+
+<option value="vmess">VMESS</option>
+
+<option value="trojan">Trojan</option>
+
+<option value="ss">Shadowsocks</option>
+
+<option value="hysteria2">Hysteria2</option>
+
+</select>
+
+<div id="protocolTags" class="tags"></div>
+
+</div>
+
+<div class="select-box">
+
+端口：
+
+<select id="portSelect">
+
+<option value="">选择端口</option>
+
+</select>
+
+<div id="portTags" class="tags"></div>
+
+</div>
+
+<div class="select-box">
+
+Warning：
+
+<select id="warningSelect">
+
+<option value="">选择</option>
+
+<option value="allowInsecure">allowInsecure，最新xray不支持</option>
+
+<option value="noGooglePassing">Google失败</option>
+
+<option value="notAvailableForNonSSLSites">仅HTTPS，HTTP失败</option>
+
+<option value="noLongerSupportedNetwork">传输协议已被最新xray淘汰</option>
+
+</select>
+
+<div id="warningTags" class="tags"></div>
+
+</div>
+
+<div class="select-box">
+
+排序：
+
+<select id="sortSelect">
+
+<option value="default">默认</option>
+
+<option value="latency">延迟</option>
+
+<option value="success">成功率</option>
+
+</select>
+
+</div>
+
+<div class="select-box">
+
+<button
+class="export-btn"
+onclick="copyAll()">
+
+复制当前所有URI
+
+</button>
+
+</div>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>地址</th>
+
+<th>端口</th>
+
+<th>协议</th>
+
+<th>国家</th>
+
+<th>备注</th>
+
+<th>Warning</th>
+
+<th>延迟</th>
+
+<th>成功率</th>
+
+<th>上次检测</th>
+
+<th>复制</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tbody">
+
+</tbody>
+
+</table>
+
+<script>
+const toggle=document.getElementById("themeToggle");
+
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark");
+    toggle.checked=true;
+}
+
+toggle.onchange=()=>{
+    document.body.classList.toggle(
+        "dark",
+        toggle.checked
+    );
+
+    localStorage.setItem(
+        "theme",
+        toggle.checked?"dark":"light"
+    );
+};
+
+let data=[];
+
+const selectedCountries=new Set();
+const selectedProtocols=new Set();
+const selectedPorts=new Set();
+const selectedWarnings=new Set();
+
+let sortMethod="default";
+
+const WARNING_MAP={
+
+    allowInsecure:{
+        text:"最新xray不支持allowInsecure",
+        cls:"orange"
+    },
+
+    noGooglePassing:{
+        text:"Google失败",
+        cls:"blue"
+    },
+
+    notAvailableForNonSSLSites:{
+        text:"仅HTTPS，HTTP测试失败",
+        cls:"red"
+    },
+
+    noLongerSupportedNetwork:{
+        text:"传输协议已被xray淘汰",
+        cls:"purple"
+    }
+
+};
+
+fetch("proxies.json")
+.then(r=>r.json())
+.then(d=>{
+
+    data=d.map((i,index)=>({
+
+        ...i,
+
+        __index:index
+
+    }));
+
+    init();
+
+    render();
+
+});
+
+function init(){
+
+    [...new Set(
+
+        data.map(i=>i.countryName)
+
+    )].sort()
+
+    .forEach(c=>{
+
+        countrySelect.add(
+            new Option(c,c)
+        );
+
+    });
+
+    [...new Set(
+
+        data.map(i=>i.port)
+
+    )]
+
+    .sort((a,b)=>a-b)
+
+    .forEach(p=>{
+
+        portSelect.add(
+
+            new Option(p,p)
+
+        );
+
+    });
+
+}
+
+countrySelect.onchange=e=>{
+
+    if(!e.target.value)return;
+
+    selectedCountries.add(
+
+        e.target.value
+
+    );
+
+    e.target.value="";
+
+    renderTags();
+
+    render();
+
+};
+
+protocolSelect.onchange=e=>{
+
+    if(!e.target.value)return;
+
+    selectedProtocols.add(
+
+        e.target.value
+
+    );
+
+    e.target.value="";
+
+    renderTags();
+
+    render();
+
+};
+
+portSelect.onchange=e=>{
+
+    if(!e.target.value)return;
+
+    selectedPorts.add(
+
+        e.target.value
+
+    );
+
+    e.target.value="";
+
+    renderTags();
+
+    render();
+
+};
+
+warningSelect.onchange=e=>{
+
+    if(!e.target.value)return;
+
+    selectedWarnings.add(
+
+        e.target.value
+
+    );
+
+    e.target.value="";
+
+    renderTags();
+
+    render();
+
+};
+
+sortSelect.onchange=e=>{
+
+    sortMethod=e.target.value;
+
+    render();
+
+};
+
+function renderTags(){
+
+    renderTagGroup(
+
+        "countryTags",
+
+        selectedCountries,
+
+        true
+
+    );
+
+    renderTagGroup(
+
+        "protocolTags",
+
+        selectedProtocols
+
+    );
+
+    renderTagGroup(
+
+        "portTags",
+
+        selectedPorts
+
+    );
+
+    renderTagGroup(
+
+        "warningTags",
+
+        selectedWarnings
+
+    );
+
+}
+
+function renderTagGroup(
+
+    id,
+
+    set,
+
+    flag=false
+
+){
+
+    const box=document.getElementById(id);
+
+    box.innerHTML="";
+
+    [...set].forEach(v=>{
+
+        const tag=document.createElement("div");
+
+        tag.className="tag";
+
+        let html="";
+
+        if(flag){
+
+            const node=data.find(
+
+                i=>i.countryName===v
+
+            );
+
+            if(node){
+
+                html+=
+                `<span class="fi fi-${node.country.toLowerCase()}"></span>`;
+
+            }
+
+        }
+
+        html+=v;
+
+        html+="<span>×</span>";
+
+        tag.innerHTML=html;
+
+        tag.lastChild.onclick=()=>{
+
+            set.delete(v);
+
+            renderTags();
+
+            render();
+
+        };
+
+        box.appendChild(tag);
+
+    });
+
+}
+
+function getFiltered(){
+
+    return data.filter(i=>{
+
+        if(
+
+            selectedCountries.size &&
+
+            !selectedCountries.has(
+
+                i.countryName
+
+            )
+
+        )return false;
+
+        if(
+
+            selectedProtocols.size &&
+
+            !selectedProtocols.has(
+
+                i.protocol
+
+            )
+
+        )return false;
+
+        if(
+
+            selectedPorts.size &&
+
+            !selectedPorts.has(
+
+                String(i.port)
+
+            )
+
+        )return false;
+
+        if(selectedWarnings.size){
+
+            const arr=i.warning||[];
+
+            let ok=false;
+
+            arr.forEach(w=>{
+
+                if(
+
+                    selectedWarnings.has(w)
+
+                )ok=true;
+
+            });
+
+            if(!ok)return false;
+
+        }
+
+        return true;
+
+    });
+
+}
+function rateBar(success,total){
+
+    if(!total)return "";
+
+    const p=Math.min(
+        100,
+        success/total*100
+    );
+
+    return `
+<div class="bar-wrap">
+<div class="bar ${
+p<40?"red":
+p<70?"yellow":
+"green"
+}" style="width:${p}%">
+</div>
+</div>`;
+
+}
+
+function latencyBar(ms){
+
+    if(ms<0)return "";
+
+    const p=Math.min(
+        100,
+        ms/5000*100
+    );
+
+    return `
+<div class="bar-wrap">
+<div class="bar ${
+ms<=500?"green":
+ms<=1500?"yellow":
+"red"
+}" style="width:${p}%">
+</div>
+</div>`;
+
+}
+
+function updateStats(list){
+
+    const total=list.length;
+
+    const countries=new Set(
+        list.map(i=>i.country)
+    ).size;
+
+    const protocolCount={};
+
+    list.forEach(i=>{
+
+        protocolCount[i.protocol]=
+        (protocolCount[i.protocol]||0)+1;
+
+    });
+
+    stats.innerHTML=`
+目前可用：
+<b>${total}</b>
+｜
+VLESS：
+${protocolCount.vless||0}
+｜
+VMESS：
+${protocolCount.vmess||0}
+｜
+Trojan：
+${protocolCount.trojan||0}
+｜
+Shadowsocks：
+${protocolCount.ss||0}
+｜
+Hysteria2：
+${protocolCount.hysteria2||0}
+｜
+国家：
+${countries}
+`;
+
+}
+
+function render(){
+
+    tbody.innerHTML="";
+
+    let list=getFiltered();
+
+    if(sortMethod==="latency"){
+
+        list=list.slice().sort(
+            (a,b)=>
+            a.latency-b.latency
+            ||
+            a.__index-b.__index
+        );
+
+    }
+
+    if(sortMethod==="success"){
+
+        list=list.slice().sort(
+            (a,b)=>
+            (b.success/b.total||0)
+            -
+            (a.success/a.total||0)
+            ||
+            a.__index-b.__index
+        );
+
+    }
+
+    updateStats(list);
+
+    list.forEach(i=>{
+
+        const warningHtml=(i.warning||[])
+        .map(w=>{
+
+            const m=WARNING_MAP[w];
+
+            if(!m)return "";
+
+            return `
+<span class="warning ${m.cls}">
+${m.text}
+</span>
+`;
+
+        }).join("");
+
+        const rate=i.total
+        ?`${(i.success/i.total*100).toFixed(1)}% (${i.success}/${i.total})`
+        :"0%";
+
+        tbody.insertAdjacentHTML(
+
+            "beforeend",
+
+`
+<tr>
+
+<td class="address">
+${i.address}
+</td>
+
+<td>
+${i.port}
+</td>
+
+<td>
+${i.protocol.toUpperCase()}
+</td>
+
+<td>
+
+<span class="country">
+
+<span class="fi fi-${i.country.toLowerCase()}"></span>
+
+${i.countryName}
+
+</span>
+
+</td>
+
+<td class="alias">
+
+${i.alias||"-"}
+
+</td>
+
+<td>
+
+${warningHtml||"-"}
+
+</td>
+
+<td>
+
+${i.latency} ms
+
+${latencyBar(i.latency)}
+
+</td>
+
+<td>
+
+${rate}
+
+${rateBar(i.success,i.total)}
+
+</td>
+
+<td>
+
+${ago(i.lastCheck)}
+
+</td>
+
+<td>
+
+<button
+class="copy-btn"
+onclick="copy(\`${i.uri}\`)">
+
+复制
+
+</button>
+
+</td>
+
+</tr>
+
+`
+
+        );
+
+    });
+
+}
+function copy(uri){
+
+    navigator.clipboard
+    .writeText(uri)
+    .then(()=>{
+
+        alert("已复制节点 URI");
+
+    });
+
+}
+
+function copyAll(){
+
+    const list=getFiltered();
+
+    if(!list.length){
+
+        alert("当前筛选结果为空");
+
+        return;
+
+    }
+
+    navigator.clipboard
+    .writeText(
+
+        list
+        .map(i=>i.uri)
+        .join("\n")
+
+    )
+    .then(()=>{
+
+        alert(
+            `已复制 ${list.length} 个节点`
+        );
+
+    });
+
+}
+
+function ago(ts){
+
+    if(!ts)return "-";
+
+    const sec=Math.floor(
+        Date.now()/1000-ts
+    );
+
+    if(sec<60){
+
+        return `${sec} 秒前`;
+
+    }
+
+    if(sec<3600){
+
+        return `${Math.floor(sec/60)} 分钟前`;
+
+    }
+
+    if(sec<86400){
+
+        return `${Math.floor(sec/3600)} 小时前`;
+
+    }
+
+    if(sec<86400*30){
+
+        return `${Math.floor(sec/86400)} 天前`;
+
+    }
+
+    const d=new Date(ts*1000);
+
+    return d.getFullYear()+"-"
+        +String(d.getMonth()+1).padStart(2,"0")+"-"
+        +String(d.getDate()).padStart(2,"0")+" "
+        +String(d.getHours()).padStart(2,"0")+":"
+        +String(d.getMinutes()).padStart(2,"0");
+
+}
+
+renderTags();
+
+render();
+      </script>
