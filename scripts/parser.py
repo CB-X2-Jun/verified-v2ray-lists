@@ -602,41 +602,113 @@ def parse_hy2(uri, country):
 
     q = get_query(parsed)
 
+    password = ""
+
+    if parsed.username:
+        password = parsed.username
+
+    elif parsed.password:
+        password = parsed.password
+
+
     data = {
 
         "password":
-            parsed.username or "",
+            password,
+
 
         "sni":
-            q.get("sni", ""),
+            q.get(
+                "sni",
+                ""
+            ),
 
-        "obfs":
-            q.get("obfs", ""),
 
-        "obfs-password":
-            q.get("obfs-password", ""),
+        "peer":
+            q.get(
+                "peer",
+                ""
+            ),
 
-        "up":
-            q.get("up",""),
 
-        "down":
-            q.get("down",""),
+        "alpn":
+            q.get(
+                "alpn",
+                ""
+            ),
+
+
+        "pinSHA256":
+            q.get(
+                "pinSHA256",
+                ""
+            ),
+
 
         "allowInsecure":
             q.get(
                 "allowInsecure",
-                q.get("insecure", "0"),
+                q.get(
+                    "insecure",
+                    "0"
+                )
             ),
+
+
+        "obfs":
+            q.get(
+                "obfs",
+                ""
+            ),
+
+
+        "obfs-password":
+            q.get(
+                "obfs-password",
+                ""
+            ),
+
+
+        "up":
+            q.get(
+                "up",
+                ""
+            ),
+
+
+        "down":
+            q.get(
+                "down",
+                ""
+            ),
+
+
+        "version":
+            q.get(
+                "version",
+                "2"
+            ),
+
+
+        "mport":
+            q.get(
+                "mport",
+                ""
+            ),
+
 
         "alias":
             alias,
+
     }
 
-    return build_node(
-        "hysteria2",
-        parsed,
-        country,
-        uri,
-        data,
+
+    return Node(
+        protocol="hysteria2",
+        address=parsed.hostname,
+        port=parsed.port,
+        country=country,
+        data=data,
+        uri=uri,
     )
 
