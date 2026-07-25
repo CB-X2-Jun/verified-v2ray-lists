@@ -199,14 +199,14 @@ def export_node(node, result, history_item):
             -1,
         ),
 
-        "success": result.get(
+        "successBool": result.get(
             "success",
             False,
         ),
 
-        "successCount": history_item["success"],
+        "success": history_item["success"],
 
-        "totalCount": history_item["total"],
+        "total": history_item["total"],
 
         "lastCheck": int(time.time()),
     }
