@@ -24,7 +24,7 @@ jobs:
           sudo apt update
           sudo apt install -y wireguard resolvconf
 
-          wget -q https://github.com/ViRb3/wgcf/releases/latest/download/wgcf_2.2.28_linux_amd64 -O wgcf
+          wget -q https://github.com/ViRb3/wgcf/releases/download/v2.2.28/wgcf_2.2.28_linux_amd64 -O wgcf
           chmod +x wgcf
           sudo mv wgcf /usr/local/bin/
 
