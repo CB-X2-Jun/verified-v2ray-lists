@@ -7,6 +7,7 @@ import subprocess
 import tempfile
 import time
 from pathlib import Path
+import traceback
 
 from parser import (
     parse,
@@ -992,12 +993,9 @@ def main():
                     )
                 )
 
-        except Exception as e:
+        except Exception:
 
-            print(
-                "skip:",
-                e,
-            )
+            traceback.print_exc()
 
 
     save_public(
