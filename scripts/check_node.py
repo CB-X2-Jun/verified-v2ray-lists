@@ -282,22 +282,22 @@ def build_outbound(node):
     ):
 
         settings = {
-            "servers": [
-                {
-                    "address":
-                        node.address,
 
-                    "port":
-                        node.port,
+            "address":
+                node.address,
 
-                    "password":
-                        d.get(
-                            "password",
-                            ""
-                        )
-                }
-            ]
+            "port":
+                node.port,
+
+            "version":
+                int(
+                    d.get(
+                        "version",
+                        2
+                    )
+                )
         }
+
 
         stream = {
 
@@ -329,6 +329,7 @@ def build_outbound(node):
                     )
             },
 
+
             "hysteriaSettings": {
 
                 "version":
@@ -345,7 +346,6 @@ def build_outbound(node):
                         ""
                     )
             }
-
         }
 
 
@@ -381,10 +381,7 @@ def build_outbound(node):
 
             "streamSettings":
                 stream
-
         }
-
-
     else:
 
         raise RuntimeError(
