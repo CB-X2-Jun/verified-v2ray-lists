@@ -860,3 +860,120 @@ def history_warning(warning):
         )
     )
 
+def main():
+
+    history = load_history()
+
+    public = []
+
+
+    for uri, country in read_nodes(
+        NODE_FILE
+    ):
+
+        try:
+
+            node = parse(
+                uri,
+                country,
+            )
+
+
+            result = check_node(node)
+
+
+            hid = result["id"]
+
+
+            old = history.get(
+                hid,
+                {}
+            )
+
+
+            success_count = old.get(
+                "success",
+                0
+            )
+
+            total_count = old.get(
+                "total",
+                0
+            )
+
+
+            total_count += 1
+
+
+            if result["success"]:
+
+                success_count += 1
+
+
+            history[hid] = {
+
+                "id": hid,
+
+                "protocol":
+                    node.protocol,
+
+                "address":
+                    node.address,
+
+                "port":
+                    node.port,
+
+                "country":
+                    country,
+
+                "uri":
+                    node.uri,
+
+                "warning":
+                    history_warning(
+                        result["warning"]
+                    ),
+
+                "success":
+                    success_count,
+
+                "total":
+                    total_count,
+
+                "lastCheck":
+                    int(time.time()),
+
+            }
+
+
+            if result["success"]:
+
+                public.append(
+                    export_node(
+                        node,
+                        result,
+                        history[hid],
+                    )
+                )
+
+
+        except Exception:
+
+            traceback.print_exc()
+
+
+
+    save_public(
+        public
+    )
+
+
+    save_history(
+        history
+    )
+
+
+
+if __name__ == "__main__":
+
+    main()
