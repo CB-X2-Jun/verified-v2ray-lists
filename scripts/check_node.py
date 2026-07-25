@@ -163,63 +163,51 @@ def node_id(node):
     ).hexdigest()[:16]
 
 
-def export_node(node, result):
+def export_node(node, result, history_item):
 
     return {
+        "id": node_id(node),
 
-        "id":
-            node_id(node),
+        "protocol": node.protocol,
 
-        "protocol":
-            node.protocol,
+        "address": node.address,
 
-        "address":
-            node.address,
+        "port": node.port,
 
-        "port":
-            node.port,
+        "country": node.country,
 
-        "country":
+        "countryName": COUNTRY_MAP.get(
             node.country,
+            "未知",
+        ),
 
-        "countryName":
-            COUNTRY_MAP.get(
-                node.country,
-                "未知",
-            ),
+        "uri": node.uri,
 
-        "uri":
-            node.uri,
+        "alias": node.data.get(
+            "alias",
+            "",
+        ),
 
-        "alias":
-            node.data.get(
-                "alias",
-                "",
-            ),
+        "warning": result.get(
+            "warning",
+            node.warning,
+        ),
 
-        "warning":
-            result.get(
-                "warning",
-                node.warning,
-            ),
+        "latency": result.get(
+            "latency",
+            -1,
+        ),
 
-        "latency":
-            result.get(
-                "latency",
-                -1,
-            ),
+        "success": result.get(
+            "success",
+            False,
+        ),
 
-        "success":
-            result.get(
-                "success",
-                False,
-            ),
+        "successCount": history_item["success"],
 
-        "lastCheck":
-            int(
-                time.time()
-            ),
+        "totalCount": history_item["total"],
 
+        "lastCheck": int(time.time()),
     }
 
 def local_socks():
@@ -964,11 +952,22 @@ def main():
                     export_node(
                         node,
                         result,
+                        history[hid],
                     )
                 )
 
                 hid = result["id"]
 
+                old = history.get(hid, {})
+                
+                success_count = old.get("success", 0)
+                total_count = old.get("total", 0)
+                
+                total_count += 1
+                
+                if result["success"]:
+                    success_count += 1
+                
                 history[hid] = {
                     "id": hid,
                 
@@ -986,10 +985,12 @@ def main():
                         result["warning"]
                     ),
                 
-                    "lastCheck":
-                        int(time.time()),
+                    "success": success_count,
+                
+                    "total": total_count,
+                
+                    "lastCheck": int(time.time()),
                 }
-
 
         except Exception as e:
 
