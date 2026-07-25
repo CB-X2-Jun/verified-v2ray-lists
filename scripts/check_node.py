@@ -6,80 +6,61 @@ import socket
 import subprocess
 import tempfile
 import time
-from pathlib import Path
 import traceback
+from pathlib import Path
 
-from parser import (
-    parse,
-    read_nodes,
-)
-
+from parser import parse, read_nodes
 from country_map import COUNTRY_MAP
 
 BASE = Path(__file__).resolve().parent.parent
 
 NODE_FILE = BASE / "node.txt"
-
 PUBLIC_FILE = BASE / "public" / "proxies.json"
-
 HISTORY_FILE = BASE / "data" / "history.json"
 
 XRAY = shutil.which("xray") or "xray"
 
 SOCKS_PORT = 28080
 
-START_TIMEOUT = 8
+START_TIMEOUT = 10
+TEST_TIMEOUT = 15
 
-TEST_TIMEOUT = 12
-
+# Google 单独检测
 GOOGLE = [
-    "https://google.com",
+    "https://www.google.com",
 ]
 
+# Google失败后的备用检测
 HTTPS_BACKUP = [
-
     "https://ipin.io",
-
-    "https://ifconfig.me/all",
-
+    "https://ifconfig.me/ip",
     "https://api.ipify.org",
-
 ]
 
+# 非SSL网站检测
 HTTP_TEST = [
-
     "http://ifconfig.me/ip",
-
     "http://api.ipify.org",
-
     "http://api.i.pn/json",
-
 ]
+
 
 def load_history():
-
     if not HISTORY_FILE.exists():
         return {}
 
-    with open(
-        HISTORY_FILE,
-        encoding="utf-8",
-    ) as f:
+    with open(HISTORY_FILE, encoding="utf-8") as f:
+        data = json.load(f)
 
-        obj = json.load(f)
+    return {
+        i["id"]: i
+        for i in data
+    }
 
-    history = {}
-
-    for i in obj:
-
-        history[i["id"]] = i
-
-    return history
 
 def save_history(history):
-
     HISTORY_FILE.parent.mkdir(
-        exist_ok=True,
+        exist_ok=True
     )
 
     with open(
@@ -87,7 +68,6 @@ def save_history(history):
         "w",
         encoding="utf-8",
     ) as f:
-
         json.dump(
             list(history.values()),
             f,
@@ -95,10 +75,10 @@ def save_history(history):
             indent=2,
         )
 
-def save_public(nodes):
 
+def save_public(nodes):
     PUBLIC_FILE.parent.mkdir(
-        exist_ok=True,
+        exist_ok=True
     )
 
     with open(
@@ -106,7 +86,6 @@ def save_public(nodes):
         "w",
         encoding="utf-8",
     ) as f:
-
         json.dump(
             nodes,
             f,
@@ -114,8 +93,8 @@ def save_public(nodes):
             indent=2,
         )
 
-def node_id(node):
 
+def node_id(node):
     import hashlib
 
     d = node.data
@@ -124,10 +103,7 @@ def node_id(node):
         "vless",
         "vmess",
     ):
-        unique = d.get(
-            "id",
-            "",
-        )
+        unique = d.get("id", "")
 
     elif node.protocol in (
         "trojan",
@@ -148,100 +124,60 @@ def node_id(node):
     else:
         unique = ""
 
-
     raw = "|".join(
-        (
+        [
             node.protocol,
             node.address.lower(),
             str(node.port),
             unique,
-        )
+        ]
     )
 
-
     return hashlib.sha256(
-        raw.encode("utf-8")
+        raw.encode()
     ).hexdigest()[:16]
 
 
 def export_node(node, result, history_item):
-
     return {
         "id": node_id(node),
-
         "protocol": node.protocol,
-
         "address": node.address,
-
         "port": node.port,
-
         "country": node.country,
-
         "countryName": COUNTRY_MAP.get(
             node.country,
             "未知",
         ),
-
         "uri": node.uri,
-
         "alias": node.data.get(
             "alias",
             "",
         ),
-
-        "warning": result.get(
-            "warning",
-            node.warning,
-        ),
-
+        "warning": list(set(
+            result.get(
+                "warning",
+                []
+            )
+        )),
         "latency": result.get(
             "latency",
             -1,
         ),
-
         "successBool": result.get(
             "success",
             False,
         ),
-
         "success": history_item["success"],
-
         "total": history_item["total"],
-
         "lastCheck": int(time.time()),
     }
-
-def local_socks():
-
-    return {
-
-        "listen": "127.0.0.1",
-
-        "port": SOCKS_PORT,
-
-        "protocol": "socks",
-
-        "settings": {
-
-            "udp": True,
-
-        },
-
-    }
-
 def build_outbound(node):
 
     p = node.protocol
     d = node.data
 
-
-    # =========================
-    # protocol settings
-    # =========================
-
     if p == "vless":
-
-        protocol = "vless"
 
         settings = {
             "vnext": [
@@ -253,22 +189,22 @@ def build_outbound(node):
                             "id": d.get("id",""),
                             "encryption": d.get(
                                 "encryption",
-                                "none",
+                                "none"
                             ),
                             "flow": d.get(
                                 "flow",
-                                "",
+                                ""
                             ),
                         }
-                    ],
+                    ]
                 }
             ]
         }
 
+        protocol = "vless"
+
 
     elif p == "vmess":
-
-        protocol = "vmess"
 
         settings = {
             "vnext": [
@@ -279,28 +215,28 @@ def build_outbound(node):
                         {
                             "id": d.get(
                                 "id",
-                                "",
+                                ""
                             ),
                             "alterId": int(
                                 d.get(
                                     "alterId",
-                                    0,
+                                    0
                                 )
                             ),
                             "security": d.get(
                                 "securityType",
-                                "auto",
-                            ),
+                                "auto"
+                            )
                         }
-                    ],
+                    ]
                 }
             ]
         }
 
+        protocol = "vmess"
+
 
     elif p == "trojan":
-
-        protocol = "trojan"
 
         settings = {
             "servers": [
@@ -309,16 +245,16 @@ def build_outbound(node):
                     "port": node.port,
                     "password": d.get(
                         "password",
-                        "",
-                    ),
+                        ""
+                    )
                 }
             ]
         }
 
+        protocol = "trojan"
+
 
     elif p == "ss":
-
-        protocol = "shadowsocks"
 
         settings = {
             "servers": [
@@ -327,23 +263,23 @@ def build_outbound(node):
                     "port": node.port,
                     "method": d.get(
                         "method",
-                        "",
+                        ""
                     ),
                     "password": d.get(
                         "password",
-                        "",
-                    ),
+                        ""
+                    )
                 }
             ]
         }
 
+        protocol = "shadowsocks"
+
 
     elif p in (
         "hy2",
-        "hysteria2",
+        "hysteria2"
     ):
-
-        protocol = "hysteria2"
 
         settings = {
             "servers": [
@@ -352,47 +288,55 @@ def build_outbound(node):
                     "port": node.port,
                     "password": d.get(
                         "password",
-                        "",
+                        ""
                     ),
+                    "obfs": d.get(
+                        "obfs",
+                        ""
+                    ),
+                    "obfs-password": d.get(
+                        "obfs-password",
+                        ""
+                    )
                 }
             ]
         }
+
+        protocol = "hysteria2"
 
 
     else:
 
         raise RuntimeError(
-            f"Unsupported protocol {p}"
+            f"Unsupported protocol: {p}"
         )
 
 
+    return {
+        "protocol": protocol,
+        "settings": settings,
+        "streamSettings":
+            build_stream_settings(d)
+    }
 
-    # =========================
-    # stream settings
-    # =========================
+def build_stream_settings(d):
 
     network = d.get(
         "network",
-        "tcp",
+        "tcp"
     ).lower()
-
 
     security = d.get(
         "security",
-        "",
+        ""
     ).lower()
 
 
     stream = {
         "network": network,
-        "security": security,
+        "security": security
     }
 
-
-
-    # =========================
-    # TLS
-    # =========================
 
     if security == "tls":
 
@@ -400,29 +344,23 @@ def build_outbound(node):
 
             "serverName": d.get(
                 "sni",
-                "",
+                ""
             ),
 
             "allowInsecure":
                 str(
                     d.get(
                         "allowInsecure",
-                        "0",
+                        "0"
                     )
                 ).lower()
                 in (
                     "1",
                     "true",
-                    "yes",
-                ),
-
+                    "yes"
+                )
         }
 
-
-
-    # =========================
-    # REALITY
-    # =========================
 
     elif security == "reality":
 
@@ -430,200 +368,194 @@ def build_outbound(node):
 
             "serverName": d.get(
                 "sni",
-                "",
+                ""
             ),
 
             "fingerprint": d.get(
                 "fp",
-                "",
+                "chrome"
             ),
 
             "publicKey": d.get(
                 "pbk",
-                "",
+                ""
             ),
 
             "shortId": d.get(
                 "sid",
-                "",
+                ""
             ),
 
             "spiderX": d.get(
                 "spx",
-                "",
-            ),
-
+                ""
+            )
         }
 
 
+    stream.update(
+        build_transport_settings(
+            network,
+            d
+        )
+    )
 
-    # =========================
-    # transport
-    # =========================
+
+    return stream
+
+def build_transport_settings(network,d):
 
     if network == "ws":
 
-        stream["wsSettings"] = {
+        return {
 
-            "path": d.get(
-                "path",
-                "/",
-            ),
+            "wsSettings": {
 
-            "headers": {
-                "Host": d.get(
-                    "host",
-                    "",
-                )
-            },
+                "path": d.get(
+                    "path",
+                    "/"
+                ),
 
-        }
+                "headers": {
 
+                    "Host":
+                        d.get(
+                            "host",
+                            ""
+                        )
 
-
-    elif network == "grpc":
-
-        stream["grpcSettings"] = {
-
-            "serviceName": d.get(
-                "serviceName",
-                "",
-            ),
-
-            "authority": d.get(
-                "authority",
-                "",
-            ),
-
-        }
-
-
-
-    elif network == "xhttp":
-
-        stream["xhttpSettings"] = {
-
-            "host": d.get(
-                "host",
-                "",
-            ),
-
-            "path": d.get(
-                "path",
-                "/",
-            ),
-
-            "mode": d.get(
-                "mode",
-                "",
-            ),
-
-        }
-
-
-
-    elif network == "httpupgrade":
-
-        stream["httpupgradeSettings"] = {
-
-            "host": d.get(
-                "host",
-                "",
-            ),
-
-            "path": d.get(
-                "path",
-                "/",
-            ),
-
-        }
-
-
-
-    elif network == "h2":
-
-        stream["httpSettings"] = {
-
-            "host": [
-                d.get(
-                    "host",
-                    "",
-                )
-            ],
-
-            "path": d.get(
-                "path",
-                "/",
-            ),
-
-        }
-
-
-
-    elif network == "kcp":
-
-        stream["kcpSettings"] = {
-
-            "header": {
-                "type": "none"
+                }
             }
-
         }
 
 
+    if network == "grpc":
 
-    elif network == "quic":
+        return {
 
-        stream["quicSettings"] = {
+            "grpcSettings": {
 
-            "security": "none",
+                "serviceName":
+                    d.get(
+                        "serviceName",
+                        ""
+                    ),
 
-            "key": "",
-
-            "header": {
-                "type": "none"
+                "authority":
+                    d.get(
+                        "authority",
+                        ""
+                    )
             }
+        }
+
+
+    if network == "xhttp":
+
+        return {
+
+            "xhttpSettings": {
+
+                "host":
+                    d.get(
+                        "host",
+                        ""
+                    ),
+
+                "path":
+                    d.get(
+                        "path",
+                        "/"
+                    ),
+
+                "mode":
+                    d.get(
+                        "mode",
+                        "auto"
+                    )
+            }
+        }
+
+
+    if network == "httpupgrade":
+
+        return {
+
+            "httpupgradeSettings": {
+
+                "host":
+                    d.get(
+                        "host",
+                        ""
+                    ),
+
+                "path":
+                    d.get(
+                        "path",
+                        "/"
+                    )
+            }
+        }
+
+
+    if network == "h2":
+
+        return {
+
+            "httpSettings": {
+
+                "host":[
+                    d.get(
+                        "host",
+                        ""
+                    )
+                ],
+
+                "path":
+                    d.get(
+                        "path",
+                        "/"
+                    )
+            }
+        }
+
+
+    if network == "tcp":
+
+        return {
 
         }
 
 
+    return {}
 
-    # tcp 不需要额外设置
-
+def local_socks():
     return {
-
-        "protocol": protocol,
-
-        "settings": settings,
-
-        "streamSettings": stream,
-
+        "listen": "127.0.0.1",
+        "port": SOCKS_PORT,
+        "protocol": "socks",
+        "settings": {
+            "udp": True,
+        },
     }
+
 
 def build_config(node):
 
     return {
 
         "log": {
-
             "loglevel": "warning",
-
         },
 
         "inbounds": [
-
             local_socks()
-
         ],
 
         "outbounds": [
-
-            build_outbound(node),
-
+            build_outbound(node)
         ],
-
     }
-
 
 def wait_port(port, timeout):
 
@@ -636,21 +568,17 @@ def wait_port(port, timeout):
             with socket.create_connection(
                 (
                     "127.0.0.1",
-                    port,
+                    port
                 ),
-                timeout=1,
+                timeout=1
             ):
-
                 return True
 
         except:
 
             time.sleep(0.2)
 
-
     return False
-
-
 
 def start_xray(node):
 
@@ -662,8 +590,17 @@ def start_xray(node):
     )
 
 
+    config = build_config(node)
+
+
+    # IPv6支持
+    config["routing"] = {
+        "domainStrategy": "AsIs"
+    }
+
+
     json.dump(
-        build_config(node),
+        config,
         tmp,
         ensure_ascii=False,
     )
@@ -673,24 +610,20 @@ def start_xray(node):
 
 
     process = subprocess.Popen(
-
         [
             XRAY,
             "run",
             "-config",
             tmp.name,
         ],
-
         stdout=subprocess.DEVNULL,
-
         stderr=subprocess.DEVNULL,
-
     )
 
 
     if not wait_port(
         SOCKS_PORT,
-        START_TIMEOUT,
+        START_TIMEOUT
     ):
 
         process.kill()
@@ -707,32 +640,24 @@ def start_xray(node):
         tmp.name,
     )
 
-
-
 def stop_xray(obj):
 
     if not obj:
         return
 
-
     process, config = obj
 
-
     try:
-
         process.kill()
 
     except:
-
         pass
 
 
     try:
-
         os.unlink(config)
 
     except:
-
         pass
 
 def curl_test(url):
@@ -740,11 +665,12 @@ def curl_test(url):
     try:
 
         result = subprocess.run(
-
             [
                 "curl",
 
                 "--silent",
+
+                "--show-error",
 
                 "--max-time",
                 str(TEST_TIMEOUT),
@@ -752,8 +678,10 @@ def curl_test(url):
                 "--proxy",
                 f"socks5h://127.0.0.1:{SOCKS_PORT}",
 
-                url,
+                "-A",
+                "Mozilla/5.0",
 
+                url,
             ],
 
             stdout=subprocess.PIPE,
@@ -766,43 +694,63 @@ def curl_test(url):
         return result.returncode == 0
 
 
-    except:
+    except Exception:
 
         return False
+
+def test_google():
+
+    for url in GOOGLE:
+
+        if curl_test(url):
+
+            return True
+
+    return False
+
+def test_backup():
+
+    for url in HTTPS_BACKUP:
+
+        if curl_test(url):
+
+            return True
+
+    return False
+
+def test_http():
+
+    for url in HTTP_TEST:
+
+        if curl_test(url):
+
+            return True
+
+    return False
 
 def check_node(node):
 
     result = {
 
-        "id":
-            node_id(node),
+        "id": node_id(node),
 
-        "protocol":
-            node.protocol,
+        "protocol": node.protocol,
 
-        "address":
-            node.address,
+        "address": node.address,
 
-        "port":
-            node.port,
+        "port": node.port,
 
-        "country":
-            node.country,
+        "country": node.country,
 
-        "uri":
-            node.uri,
+        "uri": node.uri,
 
-        "warning":
-            list(node.warning),
+        "warning": list(node.warning),
 
-        "success":
-            False,
+        "success": False,
 
-        "latency":
-            -1,
+        "latency": -1,
 
     }
-
 
 
     xray = None
@@ -818,92 +766,68 @@ def check_node(node):
             return result
 
 
-
-        # ------------------
-        # google
-        # ------------------
-
-        ok = False
-
+        # =====================
+        # Google
+        # =====================
 
         start = time.time()
 
 
-        for url in GOOGLE:
-
-            if curl_test(url):
-
-                ok = True
-
-                break
-
-
-
-        latency = int(
-            (time.time()-start)*1000
-        )
-
-
-
-        if ok:
+        if test_google():
 
             result["success"] = True
 
-            result["latency"] = latency
+            result["latency"] = int(
+                (time.time()-start)*1000
+            )
 
 
         else:
 
-            backup = False
+            # =====================
+            # Google失败备用
+            # =====================
 
-
-            for url in HTTPS_BACKUP:
-
-                if curl_test(url):
-
-                    backup = True
-
-                    break
-
-
-
-            if backup:
+            if test_backup():
 
                 result["success"] = True
 
-                result["latency"] = latency
-
-                result["warning"].append(
-                    "noGooglePassing"
+                result["latency"] = int(
+                    (time.time()-start)*1000
                 )
 
 
+                if (
+                    "noGooglePassing"
+                    not in result["warning"]
+                ):
 
-        # ------------------
-        # HTTP
-        # ------------------
+                    result["warning"].append(
+                        "noGooglePassing"
+                    )
+
+
+        # =====================
+        # HTTP测试
+        # =====================
 
         if result["success"]:
 
-            http_ok = False
+            if not test_http():
 
-
-            for url in HTTP_TEST:
-
-                if curl_test(url):
-
-                    http_ok = True
-
-                    break
-
-
-
-            if not http_ok:
-
-                result["warning"].append(
+                if (
                     "notAvailableForNonSSLSites"
-                )
+                    not in result["warning"]
+                ):
 
+                    result["warning"].append(
+                        "notAvailableForNonSSLSites"
+                    )
+
+
+    except Exception:
+
+        traceback.print_exc()
 
 
     finally:
@@ -911,103 +835,28 @@ def check_node(node):
         stop_xray(xray)
 
 
-
     return result
 
 def history_warning(warning):
 
-    return [
-        i
-        for i in warning
-        if i in (
-            "allowInsecure",
-            "noLongerSupportedNetwork",
+    keep = {
+
+        "allowInsecure",
+
+        "noLongerSupportedNetwork",
+
+        "noGooglePassing",
+
+        "notAvailableForNonSSLSites",
+
+    }
+
+
+    return list(
+        set(
+            i
+            for i in warning
+            if i in keep
         )
-    ]
-
-def main():
-
-    history = load_history()
-
-    public = []
-
-
-    for uri, country in read_nodes(
-        NODE_FILE
-    ):
-
-        try:
-
-            node = parse(
-                uri,
-                country,
-            )
-
-
-            result = check_node(node)
-
-            hid = result["id"]
-
-            old = history.get(hid, {})
-                    
-            success_count = old.get("success", 0)
-            total_count = old.get("total", 0)
-                    
-            total_count += 1
-                    
-            if result["success"]:
-                success_count += 1
-                    
-            history[hid] = {
-                "id": hid,
-                    
-                "protocol": node.protocol,
-                    
-                "address": node.address,
-                    
-                "port": node.port,
-                    
-                "country": country,
-                    
-                "uri": node.uri,
-                    
-                "warning": history_warning(
-                    result["warning"]
-                ),
-                    
-                "success": success_count,
-                    
-                "total": total_count,
-                    
-                "lastCheck": int(time.time()),
-            }
-
-
-            if result["success"]:
-
-                public.append(
-                    export_node(
-                        node,
-                        result,
-                        history[hid],
-                    )
-                )
-
-        except Exception:
-
-            traceback.print_exc()
-
-
-    save_public(
-        public
     )
-
-    save_history(
-        history
-    )
-
-
-if __name__ == "__main__":
-
-    main()
 
