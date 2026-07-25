@@ -19,6 +19,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Enable IPv6 with WARP
+        run: |
+          sudo apt update
+          sudo apt install -y wireguard resolvconf
+
+          wget -q https://github.com/ViRb3/wgcf/releases/latest/download/wgcf_2.2.28_linux_amd64 -O wgcf
+          chmod +x wgcf
+          sudo mv wgcf /usr/local/bin/
+
+          wgcf register --accept-tos
+          wgcf generate
+
+          sudo mkdir -p /etc/wireguard
+          sudo cp wgcf-profile.conf /etc/wireguard/wgcf.conf
+
+          sudo chmod 600 /etc/wireguard/wgcf.conf
+
+          sudo wg-quick up wgcf
+
+      - name: Test IPv4
+        run: |
+          echo "IPv4 connectivity:"
+          curl -4 https://api.ipify.org
+
+      - name: Test IPv6
+        run: |
+          echo "IPv6 address:"
+          ip -6 addr
+
+          echo "IPv6 connectivity:"
+          curl -6 https://api64.ipify.org
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
