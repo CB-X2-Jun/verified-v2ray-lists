@@ -9,11 +9,11 @@
     "uri": "vless://StableInternet@104.234.239.50:2053?encryption=none&security=tls&sni=grc.accuratenetworkchecker.ir&fp=chrome&insecure=0&allowInsecure=0&type=grpc&authority=&serviceName=StableInternet&mode=gun#Germany",
     "alias": "Germany",
     "warning": [],
-    "latency": 565,
+    "latency": 434,
     "successBool": true,
-    "success": 1,
-    "total": 1,
-    "lastCheck": 1784951343
+    "success": 2,
+    "total": 2,
+    "lastCheck": 1784956283
   },
   {
     "id": "47a0f76746119d79",
@@ -25,11 +25,11 @@
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.241:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DatacampTR",
     "alias": "DatacampTR",
     "warning": [],
-    "latency": 1951,
+    "latency": 1696,
     "successBool": true,
-    "success": 1,
-    "total": 1,
-    "lastCheck": 1784951346
+    "success": 2,
+    "total": 2,
+    "lastCheck": 1784956286
   },
   {
     "id": "a6871031a0d423a9",
@@ -40,13 +40,11 @@
     "countryName": "香港",
     "uri": "vless://57beeeb0-03fc-4fc9-94da-7604488a7134@apinbxs.eovay.com:35114?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.lamer.com.hk&fp=ios&pbk=CEI2EZLWT56cxGGEaLpJOp6769o_YrgYp6s2UGOw2ns&sid=32a89f7336ff0119&type=tcp&headerType=none#",
     "alias": "",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 7,
+    "warning": [],
+    "latency": 4789,
     "successBool": true,
-    "success": 1,
-    "total": 1,
-    "lastCheck": 1784951349
+    "success": 2,
+    "total": 2,
+    "lastCheck": 1784956294
   }
 ]
