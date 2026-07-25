@@ -945,6 +945,42 @@ def main():
 
             result = check_node(node)
 
+            hid = result["id"]
+
+            old = history.get(hid, {})
+                    
+            success_count = old.get("success", 0)
+            total_count = old.get("total", 0)
+                    
+            total_count += 1
+                    
+            if result["success"]:
+                success_count += 1
+                    
+            history[hid] = {
+                "id": hid,
+                    
+                "protocol": node.protocol,
+                    
+                "address": node.address,
+                    
+                "port": node.port,
+                    
+                "country": country,
+                    
+                "uri": node.uri,
+                    
+                "warning": history_warning(
+                    result["warning"]
+                ),
+                    
+                "success": success_count,
+                    
+                "total": total_count,
+                    
+                "lastCheck": int(time.time()),
+            }
+
 
             if result["success"]:
 
@@ -955,42 +991,6 @@ def main():
                         history[hid],
                     )
                 )
-
-                hid = result["id"]
-
-                old = history.get(hid, {})
-                
-                success_count = old.get("success", 0)
-                total_count = old.get("total", 0)
-                
-                total_count += 1
-                
-                if result["success"]:
-                    success_count += 1
-                
-                history[hid] = {
-                    "id": hid,
-                
-                    "protocol": node.protocol,
-                
-                    "address": node.address,
-                
-                    "port": node.port,
-                
-                    "country": country,
-                
-                    "uri": node.uri,
-                
-                    "warning": history_warning(
-                        result["warning"]
-                    ),
-                
-                    "success": success_count,
-                
-                    "total": total_count,
-                
-                    "lastCheck": int(time.time()),
-                }
 
         except Exception as e:
 
