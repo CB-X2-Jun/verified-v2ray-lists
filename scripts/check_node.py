@@ -139,7 +139,6 @@ def node_id(node):
         )
 
     elif node.protocol == "ss":
-
         unique = "{}:{}".format(
             d.get("method", ""),
             d.get("password", ""),
@@ -148,19 +147,21 @@ def node_id(node):
     else:
         unique = ""
 
+
     raw = "|".join(
-        [
+        (
             node.protocol,
-            node.address,
+            node.address.lower(),
             str(node.port),
             unique,
-            node.uri,
-        ]
+        )
     )
+
 
     return hashlib.sha256(
         raw.encode("utf-8")
     ).hexdigest()[:16]
+
 
 def export_node(node, result):
 
@@ -199,7 +200,7 @@ def export_node(node, result):
         "warning":
             result.get(
                 "warning",
-                [],
+                node.warning,
             ),
 
         "latency":
@@ -220,7 +221,6 @@ def export_node(node, result):
             ),
 
     }
-
 
 def local_socks():
 
@@ -967,44 +967,28 @@ def main():
                     )
                 )
 
+                hid = result["id"]
 
-            hid = result["id"]
-
-
-            old = history.get(
-                hid,
-                {},
-            )
-
-
-            history[hid] = {
-
-                "id": hid,
-
-                "protocol":
-                    node.protocol,
-
-                "address":
-                    node.address,
-
-                "port":
-                    node.port,
-
-                "country":
-                    country,
-
-                "uri":
-                    node.uri,
-
-                "warning":
-                    history_warning(
+                history[hid] = {
+                    "id": hid,
+                
+                    "protocol": node.protocol,
+                
+                    "address": node.address,
+                
+                    "port": node.port,
+                
+                    "country": country,
+                
+                    "uri": node.uri,
+                
+                    "warning": history_warning(
                         result["warning"]
                     ),
-
-                "lastCheck":
-                    int(time.time()),
-
-            }
+                
+                    "lastCheck":
+                        int(time.time()),
+                }
 
 
         except Exception as e:
