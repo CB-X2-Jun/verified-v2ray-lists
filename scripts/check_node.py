@@ -284,25 +284,105 @@ def build_outbound(node):
         settings = {
             "servers": [
                 {
-                    "address": node.address,
-                    "port": node.port,
-                    "password": d.get(
-                        "password",
-                        ""
-                    ),
-                    "obfs": d.get(
-                        "obfs",
-                        ""
-                    ),
-                    "obfs-password": d.get(
-                        "obfs-password",
-                        ""
-                    )
+                    "address":
+                        node.address,
+
+                    "port":
+                        node.port,
+
+                    "password":
+                        d.get(
+                            "password",
+                            ""
+                        )
                 }
             ]
         }
 
-        protocol = "hysteria2"
+        stream = {
+
+            "network":
+                "hysteria",
+
+            "security":
+                "tls",
+
+            "tlsSettings": {
+
+                "serverName":
+                    d.get(
+                        "sni",
+                        ""
+                    ),
+
+                "allowInsecure":
+                    str(
+                        d.get(
+                            "allowInsecure",
+                            "0"
+                        )
+                    ).lower()
+                    in (
+                        "1",
+                        "true",
+                        "yes"
+                    )
+            },
+
+            "hysteriaSettings": {
+
+                "version":
+                    int(
+                        d.get(
+                            "version",
+                            2
+                        )
+                    ),
+
+                "auth":
+                    d.get(
+                        "password",
+                        ""
+                    )
+            }
+
+        }
+
+
+        if d.get("pinSHA256"):
+
+            stream["tlsSettings"][
+                "pinnedPeerCertSha256"
+            ] = d["pinSHA256"]
+
+
+        if d.get("obfs") == "salamander":
+
+            stream["hysteriaSettings"]["obfs"] = {
+
+                "type":
+                    "salamander",
+
+                "password":
+                    d.get(
+                        "obfs-password",
+                        ""
+                    )
+            }
+
+
+        return {
+
+            "protocol":
+                "hysteria",
+
+            "settings":
+                settings,
+
+            "streamSettings":
+                stream
+
+        }
 
 
     else:
