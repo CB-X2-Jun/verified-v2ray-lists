@@ -1,0 +1,63 @@
+name: Check Nodes
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 */2 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Xray
+        run: |
+          curl -L https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -o xray.zip
+          unzip -q xray.zip
+          chmod +x xray
+          sudo mv xray /usr/local/bin/
+
+      - name: Check Version
+        run: |
+          python --version
+          xray version
+          curl --version
+
+      - name: Create Directories
+        run: |
+          mkdir -p public
+          mkdir -p data
+
+      - name: Check Nodes
+        run: |
+          python scripts/check_node.py
+
+      - name: Commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git add public data
+
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+
+          git commit -m "Update node list"
+
+          git push
