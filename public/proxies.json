@@ -9,11 +9,30 @@
     "uri": "vless://StableInternet@104.234.239.50:2053?encryption=none&security=tls&sni=grc.accuratenetworkchecker.ir&fp=chrome&insecure=0&allowInsecure=0&type=grpc&authority=&serviceName=StableInternet&mode=gun#Germany",
     "alias": "Germany",
     "warning": [],
-    "latency": 1374,
+    "latency": 826,
     "successBool": true,
-    "success": 12,
-    "total": 15,
-    "lastCheck": 1785019865
+    "success": 13,
+    "total": 16,
+    "lastCheck": 1785032577
+  },
+  {
+    "id": "47a0f76746119d79",
+    "protocol": "vless",
+    "address": "45.196.201.241",
+    "port": 443,
+    "country": "TR",
+    "countryName": "土耳其",
+    "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.241:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DatacampTR",
+    "alias": "DatacampTR",
+    "warning": [
+      "noGooglePassing",
+      "notAvailableForNonSSLSites"
+    ],
+    "latency": 17592,
+    "successBool": true,
+    "success": 13,
+    "total": 16,
+    "lastCheck": 1785032640
   },
   {
     "id": "1b5f296c21800b7b",
@@ -25,11 +44,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 1447,
+    "latency": 2566,
     "successBool": true,
-    "success": 12,
-    "total": 15,
-    "lastCheck": 1785019998
+    "success": 13,
+    "total": 16,
+    "lastCheck": 1785032698
   },
   {
     "id": "bbde9688827fc903",
@@ -40,12 +59,14 @@
     "countryName": "法国",
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIjIzIEZSIOazleWbvSB2bWVzcyBJUHY2IFvmnInkuIDngrnkuI3lubLlh4BdIOacuuaIvyIsDQogICJhZGQiOiAiMjAwMTpiYzg6MzJkNzoyMjU6OjMiLA0KICAicG9ydCI6ICI1NTAwOSIsDQogICJpZCI6ICJjZDgwZDBhNC1hOGVmLTQ0OTItYjk1Ni1kYTgyYTZjZWNhZjkiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIiIsDQogICJwYXRoIjogIi8wek5XNTZzRiIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "23 FR 法国 vmess IPv6 [有一点不干净] 机房",
-    "warning": [],
-    "latency": 809,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1512,
     "successBool": true,
-    "success": 12,
-    "total": 15,
-    "lastCheck": 1785019999
+    "success": 13,
+    "total": 16,
+    "lastCheck": 1785032701
   },
   {
     "id": "a3f6bbfcd3bc29ae",
@@ -59,11 +80,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 35188,
+    "latency": 25512,
     "successBool": true,
-    "success": 6,
-    "total": 6,
-    "lastCheck": 1785020148
+    "success": 7,
+    "total": 7,
+    "lastCheck": 1785032838
   },
   {
     "id": "d8a7e97e3eb31da9",
@@ -74,12 +95,14 @@
     "countryName": "芬兰",
     "uri": "vless://eab915bc-d2df-73d1-47d0-6eb240497055@fn.fifapes.monster:2090?encryption=none&security=none&fp=chrome&type=tcp&headerType=none&host=fn.fifapes.monster#%F0%9F%87%AB%F0%9F%87%AE%E4%B8%A8yoyapai.com",
     "alias": "🇫🇮丨yoyapai.com",
-    "warning": [],
-    "latency": 1444,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 16558,
     "successBool": true,
-    "success": 6,
-    "total": 6,
-    "lastCheck": 1785020150
+    "success": 7,
+    "total": 7,
+    "lastCheck": 1785032856
   },
   {
     "id": "f444caa248fd605d",
@@ -90,14 +113,12 @@
     "countryName": "美国",
     "uri": "vless://eeb6823c-b926-4ea2-866a-5542edd26e59@cloudflare-ip.mofashi.ltd:443?encryption=none&security=tls&sni=t1s1.rittbo.kdns.fr&fp=chrome&insecure=0&allowInsecure=0&ech=cloudflare-ech.com%2Bhttps%3A%2F%2Fdns.alidns.com%2Fdns-query&type=ws&host=t1s1.rittbo.kdns.fr&path=%2F#CF%E4%B8%AD%E8%BD%AC%20%7C%20yoyapai.com",
     "alias": "CF中转 | yoyapai.com",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 7643,
+    "warning": [],
+    "latency": 1001,
     "successBool": true,
-    "success": 6,
-    "total": 6,
-    "lastCheck": 1785020158
+    "success": 7,
+    "total": 7,
+    "lastCheck": 1785032857
   },
   {
     "id": "febf1716aa23cc29",
@@ -109,11 +130,11 @@
     "uri": "vless://eeb6823c-b926-4ea2-866a-5542edd26e59@cf.877774.xyz:443?encryption=none&security=tls&sni=t1s1.rittbo.kdns.fr&fp=chrome&insecure=0&allowInsecure=0&ech=cloudflare-ech.com%2Bhttps%3A%2F%2Fdns.alidns.com%2Fdns-query&type=ws&host=t1s1.rittbo.kdns.fr&path=%2F#003%20datacenter%20node",
     "alias": "003 datacenter node",
     "warning": [],
-    "latency": 952,
+    "latency": 771,
     "successBool": true,
-    "success": 6,
-    "total": 6,
-    "lastCheck": 1785020159
+    "success": 7,
+    "total": 7,
+    "lastCheck": 1785032858
   },
   {
     "id": "21c35f46e28b131c",
@@ -124,12 +145,14 @@
     "countryName": "新加坡",
     "uri": "vless://eeb6823c-b926-4ea2-866a-5542edd26e59@162.159.4.221:8443?encryption=none&security=tls&sni=t1s1.rittbo.kdns.fr&fp=chrome&insecure=0&allowInsecure=0&ech=cloudflare-ech.com%2Bhttps%3A%2F%2Fdns.alidns.com%2Fdns-query&type=ws&host=t1s1.rittbo.kdns.fr&path=%2F#",
     "alias": "",
-    "warning": [],
-    "latency": 208,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 624,
     "successBool": true,
-    "success": 6,
-    "total": 6,
-    "lastCheck": 1785020159
+    "success": 7,
+    "total": 7,
+    "lastCheck": 1785032859
   },
   {
     "id": "0522e59193ef2bda",
@@ -143,10 +166,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 593,
+    "latency": 10789,
     "successBool": true,
-    "success": 6,
-    "total": 6,
-    "lastCheck": 1785020160
+    "success": 7,
+    "total": 7,
+    "lastCheck": 1785032886
   }
 ]
