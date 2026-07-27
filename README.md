@@ -9,6 +9,7 @@
 ## 目前支持协议
 - VLESS
 - VMESS
+- Trojan
 
 ## 已解决的问题
 - 使用WARP给GitHub action套上IPv6以检测IPv6节点
@@ -19,7 +20,6 @@
 - 解决Shadowsocks（传输协议为tcp）的配置与检测
 - 解决Shadowsocks（传输协议为ws，带有v2ray-plugin）的配置与检测
 - 解决hy2的配置与检测
-- 支持trojan
 
 ### 第二优先级
 - 支持TUIC
