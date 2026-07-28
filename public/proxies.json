@@ -8,12 +8,15 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.241:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DatacampTR",
     "alias": "DatacampTR",
-    "warning": [],
-    "latency": 1678,
+    "warning": [
+      "notAvailableForNonSSLSites",
+      "noGooglePassing"
+    ],
+    "latency": 16462,
     "successBool": true,
-    "success": 26,
-    "total": 33,
-    "lastCheck": 1785246873
+    "success": 27,
+    "total": 34,
+    "lastCheck": 1785266259
   },
   {
     "id": "1b5f296c21800b7b",
@@ -25,11 +28,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 595,
+    "latency": 610,
     "successBool": true,
-    "success": 30,
-    "total": 33,
-    "lastCheck": 1785246945
+    "success": 31,
+    "total": 34,
+    "lastCheck": 1785266315
   },
   {
     "id": "bbde9688827fc903",
@@ -41,11 +44,27 @@
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIjIzIEZSIOazleWbvSB2bWVzcyBJUHY2IFvmnInkuIDngrnkuI3lubLlh4BdIOacuuaIvyIsDQogICJhZGQiOiAiMjAwMTpiYzg6MzJkNzoyMjU6OjMiLA0KICAicG9ydCI6ICI1NTAwOSIsDQogICJpZCI6ICJjZDgwZDBhNC1hOGVmLTQ0OTItYjk1Ni1kYTgyYTZjZWNhZjkiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIiIsDQogICJwYXRoIjogIi8wek5XNTZzRiIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "23 FR 法国 vmess IPv6 [有一点不干净] 机房",
     "warning": [],
-    "latency": 798,
+    "latency": 729,
     "successBool": true,
-    "success": 30,
-    "total": 33,
-    "lastCheck": 1785246946
+    "success": 31,
+    "total": 34,
+    "lastCheck": 1785266317
+  },
+  {
+    "id": "d8a7e97e3eb31da9",
+    "protocol": "vless",
+    "address": "fn.fifapes.monster",
+    "port": 2090,
+    "country": "FI",
+    "countryName": "芬兰",
+    "uri": "vless://eab915bc-d2df-73d1-47d0-6eb240497055@fn.fifapes.monster:2090?encryption=none&security=none&fp=chrome&type=tcp&headerType=none&host=fn.fifapes.monster#%F0%9F%87%AB%F0%9F%87%AE%E4%B8%A8yoyapai.com",
+    "alias": "🇫🇮丨yoyapai.com",
+    "warning": [],
+    "latency": 1045,
+    "successBool": true,
+    "success": 20,
+    "total": 25,
+    "lastCheck": 1785266469
   },
   {
     "id": "c17109079c4e977e",
@@ -57,11 +76,11 @@
     "uri": "vless://f55ce6cc-3f6b-40fc-9e3b-abe26db17009@18.239.134.69:80?encryption=none&security=none&type=ws&host=d2e1v87ko56lyw.cloudfront.net%3Aassets.opensignal.com&path=%2F#%5Bopenproxylist.com%5D%20TH%2015041299",
     "alias": "[openproxylist.com] TH 15041299",
     "warning": [],
-    "latency": 9940,
+    "latency": 7014,
     "successBool": true,
-    "success": 12,
-    "total": 13,
-    "lastCheck": 1785247285
+    "success": 13,
+    "total": 14,
+    "lastCheck": 1785266609
   },
   {
     "id": "0469e3ffd187843f",
@@ -73,11 +92,11 @@
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.169:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DataCamp",
     "alias": "DataCamp",
     "warning": [],
-    "latency": 1563,
+    "latency": 2013,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247427
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785266739
   },
   {
     "id": "a041e1cf9935102e",
@@ -88,14 +107,12 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.181:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#",
     "alias": "",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 1910,
+    "warning": [],
+    "latency": 1532,
     "successBool": true,
-    "success": 12,
-    "total": 13,
-    "lastCheck": 1785247430
+    "success": 13,
+    "total": 14,
+    "lastCheck": 1785266742
   },
   {
     "id": "cad666a811b58778",
@@ -107,11 +124,11 @@
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkJ5IEVicmFTaGEiLA0KICAiYWRkIjogIjkxLjEwNy4xMzkuMTg2IiwNCiAgInBvcnQiOiAiNTE0NTkiLA0KICAiaWQiOiAiNTAwY2RjODMtYjE4OS00ZDc5LWIwNmItMTM5Yzc5NzJhNTdmIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ0Y3AiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAiIiwNCiAgInBhdGgiOiAiIiwNCiAgInRscyI6ICIiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiIsDQogICJmcCI6ICIiLA0KICAiaW5zZWN1cmUiOiAiMCINCn0=",
     "alias": "By EbraSha",
     "warning": [],
-    "latency": 759,
+    "latency": 885,
     "successBool": true,
-    "success": 9,
-    "total": 13,
-    "lastCheck": 1785247431
+    "success": 10,
+    "total": 14,
+    "lastCheck": 1785266744
   },
   {
     "id": "874f322c5b05e4a0",
@@ -122,12 +139,14 @@
     "countryName": "德国",
     "uri": "vless://14b48651-3738-4926-bc09-4c04e87ff80b@static.lotussec.com:443?encryption=none&security=tls&sni=static.lotussec.com&fp=firefox&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=static.lotussec.com&path=%2FJoin-JavidnamanIran-on-Telegram&mode=stream-one&extra=%7B%22noGRPCHeader%22%3Atrue%2C%22xmux%22%3A%7B%22maxConcurrency%22%3A%226%22%2C%22hKeepAlivePeriod%22%3A12%7D%7D#",
     "alias": "",
-    "warning": [],
-    "latency": 1787,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1211,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247440
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785266753
   },
   {
     "id": "039a1a8773475439",
@@ -138,14 +157,12 @@
     "countryName": "美国",
     "uri": "vless://11e57eeb-ffdf-4983-a9fa-ad352dea7253@154.193.55.183:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4&sid=dbbe8dca27a92c35&type=tcp&headerType=none#082%20chicago%20datacenter%20node",
     "alias": "082 chicago datacenter node",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 269,
+    "warning": [],
+    "latency": 370,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247441
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785266754
   },
   {
     "id": "b4ef24233f7fac45",
@@ -157,11 +174,11 @@
     "uri": "vless://c97b2158-64c9-1f55-8167-72970d347288@157.22.19.5:443?encryption=none&security=reality&sni=download.nvidia.com&fp=chrome&pbk=wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk&type=xhttp&path=%2F#%F0%9F%87%AB%F0%9F%87%AEFI%20%7C%20%E6%9D%A5%E8%87%AAblog.banyunxiaoxi.icu%E5%B0%8F%E6%B1%90%E6%90%AC%E8%BF%90",
     "alias": "🇫🇮FI | 来自blog.banyunxiaoxi.icu小汐搬运",
     "warning": [],
-    "latency": 1596,
+    "latency": 961,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247444
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785266755
   },
   {
     "id": "c37f43b6556f9c85",
@@ -172,12 +189,14 @@
     "countryName": "荷兰",
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
-    "warning": [],
-    "latency": 855,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1213,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247446
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785266757
   },
   {
     "id": "1d106fe2610d814b",
@@ -188,14 +207,12 @@
     "countryName": "乌克兰",
     "uri": "vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@ukraine.xiaomaimai.dpdns.org:20071?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.lamer.com&fp=edge&pbk=zX5dT9fA8VRXb3XSB8olbacIR1Dq69juoC7US2paR08&sid=a02bf9&type=tcp&headerType=none#UA%20from%20FreeProxyDB.com",
     "alias": "UA from FreeProxyDB.com",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 1654,
+    "warning": [],
+    "latency": 1243,
     "successBool": true,
-    "success": 11,
-    "total": 13,
-    "lastCheck": 1785247613
+    "success": 12,
+    "total": 14,
+    "lastCheck": 1785266883
   },
   {
     "id": "4afa666572d17e54",
@@ -207,11 +224,11 @@
     "uri": "vless://52d0b2d5-a003-4509-ab70-d1d720a14cd7@hu007.bearbeer.digital:443?encryption=none&security=reality&sni=hu007.bearbeer.digital&fp=qq&pbk=z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU&spx=%2F&type=xhttp&path=%2F&mode=auto#",
     "alias": "",
     "warning": [],
-    "latency": 3180,
+    "latency": 1701,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247618
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785266887
   },
   {
     "id": "e0d12bd787264824",
@@ -223,11 +240,11 @@
     "uri": "vless://a1de0630-5786-48a0-84f6-dc6f2de10d6d@91.193.58.217:2053?encryption=none&security=tls&sni=vlso.1d.mom&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=vlso.1d.mom&path=%2Fsocks5%3D888%3A888%408.210.127.248%3A1080#IPv4%20HK%20Alibaba%20Cloud%20%26%20IPv6%20US%20CloudflareCDN%20-%20HK%2FUS%20Node%2C%20VLESS",
     "alias": "IPv4 HK Alibaba Cloud & IPv6 US CloudflareCDN - HK/US Node, VLESS",
     "warning": [],
-    "latency": 241,
+    "latency": 214,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247860
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267105
   },
   {
     "id": "509db1605ef5aa50",
@@ -239,11 +256,11 @@
     "uri": "vless://a1de0630-5786-48a0-84f6-dc6f2de10d6d@91.193.59.246:2096?encryption=none&security=tls&sni=vlso.1d.mom&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=vlso.1d.mom&path=%2Fsocks5%3D888%3A888%408.210.127.248%3A1080#IPv4%20HK%20Alibaba%20Cloud%20%26%20IPv6%20US%20CloudflareCDN%20-%20HK%2FUS%20Node%2C%20VLESS",
     "alias": "IPv4 HK Alibaba Cloud & IPv6 US CloudflareCDN - HK/US Node, VLESS",
     "warning": [],
-    "latency": 241,
+    "latency": 186,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247880
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267126
   },
   {
     "id": "59a9d8250831cc89",
@@ -254,12 +271,14 @@
     "countryName": "芬兰",
     "uri": "vless://0a76a766-d141-44b8-944e-dff757d7116f@163.5.153.153:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.samsung.com&fp=chrome&pbk=aB_2Tcf0A5LoiIEZHztR_l-ZOFeJKxYRH67s_OVQ9C0&sid=a91045bc&type=tcp&headerType=none#",
     "alias": "",
-    "warning": [],
-    "latency": 3230,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1476,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247884
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267128
   },
   {
     "id": "c1b66b856da134da",
@@ -271,11 +290,11 @@
     "uri": "vless://a1de0630-5786-48a0-84f6-dc6f2de10d6d@91.193.58.163:8443?encryption=none&security=tls&sni=vlso.1d.mom&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=vlso.1d.mom&path=%2Fsocks5%3D888%3A888%408.210.127.248%3A1080#IPv4%20HK%20Alibaba%20Cloud%20%26%20IPv6%20US%20CloudflareCDN%20-%20HK%2FUS%20Node%2C%20VLESS",
     "alias": "IPv4 HK Alibaba Cloud & IPv6 US CloudflareCDN - HK/US Node, VLESS",
     "warning": [],
-    "latency": 206,
+    "latency": 139,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247885
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267128
   },
   {
     "id": "a29175611a16db61",
@@ -287,11 +306,11 @@
     "uri": "trojan://c206d543-023d-46cc-9d5a-1f0f2fc16323@188.164.248.122:443?security=tls&sni=space.byu.id.yxls.eu.cc&insecure=0&allowInsecure=0&type=ws&host=space.byu.id.yxls.eu.cc&path=%2Fin-pdr#IPv4%20IN%20P.D.R%20Solutions%20FZC%20%26%20IPv6%20SG%20CloudflareCDN%20-%20IN%2FSG%20Node%2C%20VLESS",
     "alias": "IPv4 IN P.D.R Solutions FZC & IPv6 SG CloudflareCDN - IN/SG Node, VLESS",
     "warning": [],
-    "latency": 161,
+    "latency": 159,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247892
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267138
   },
   {
     "id": "ffb47bfd7644a533",
@@ -302,12 +321,14 @@
     "countryName": "轮换不定国家",
     "uri": "vless://cfde0aba-0985-4034-ab92-50b1534b126c@151.101.56.7:80?encryption=none&security=none&type=ws&host=BankMelat.glObal.ssl.faStly.nEt.&path=%2F#IPv4%20%26%20IPv6%20Hetzner%20-%20ROTATING%20Node%2C%20VLESS",
     "alias": "IPv4 & IPv6 Hetzner - ROTATING Node, VLESS",
-    "warning": [],
-    "latency": 12023,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 7104,
     "successBool": true,
-    "success": 12,
-    "total": 13,
-    "lastCheck": 1785247913
+    "success": 13,
+    "total": 14,
+    "lastCheck": 1785267151
   },
   {
     "id": "09de10f6b4cba835",
@@ -318,15 +339,12 @@
     "countryName": "芬兰",
     "uri": "vless://c7e9c591-2764-423a-afca-efbd010fd396@103.54.16.230:2053?encryption=none&security=tls&sni=forfreeuse.sub-flow.online&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=forfreeuse.sub-flow.online&path=%2F#",
     "alias": "",
-    "warning": [
-      "noGooglePassing",
-      "notAvailableForNonSSLSites"
-    ],
-    "latency": 16691,
+    "warning": [],
+    "latency": 3349,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247957
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267156
   },
   {
     "id": "31cc01cddff9d574",
@@ -337,12 +355,14 @@
     "countryName": "芬兰",
     "uri": "vless://5e243126-4a2a-84b6-782a-73b14797fb5f@89.47.55.3:8443?encryption=none&security=reality&sni=dl.google.com&fp=chrome&pbk=iVDh09Vm2DqZMNQoUdf-LCZ6TqVGb9mLXnClAK2LRj4&type=grpc&authority=&serviceName=TunService&mode=gun#IPv4%20Fast%20Servers%20Ltd%20-%20FI%20Node%2C%20VLESS",
     "alias": "IPv4 Fast Servers Ltd - FI Node, VLESS",
-    "warning": [],
-    "latency": 1136,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 2648,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247972
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267172
   },
   {
     "id": "1793ea2e5acc52ab",
@@ -353,11 +373,13 @@
     "countryName": "瑞典",
     "uri": "vless://deb9c015-1ffe-4e41-9d21-310eb0422a4c@swdh1.redemshenvpn.site:4343?encryption=none&flow=xtls-rprx-vision&security=reality&sni=metrika.yandex.ru&fp=qq&pbk=idAD9lBougKTjO-EoWH03ieKqplNFUQ9lnYwU-USVys&sid=d8f3a9c2&type=tcp&headerType=none#SE",
     "alias": "SE",
-    "warning": [],
-    "latency": 5138,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1348,
     "successBool": true,
-    "success": 13,
-    "total": 13,
-    "lastCheck": 1785247978
+    "success": 14,
+    "total": 14,
+    "lastCheck": 1785267177
   }
 ]
