@@ -9,13 +9,14 @@
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.241:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DatacampTR",
     "alias": "DatacampTR",
     "warning": [
+      "notAvailableForNonSSLSites",
       "noGooglePassing"
     ],
-    "latency": 47687,
+    "latency": 17646,
     "successBool": true,
-    "success": 47,
-    "total": 59,
-    "lastCheck": 1785611013
+    "success": 48,
+    "total": 60,
+    "lastCheck": 1785617158
   },
   {
     "id": "1b5f296c21800b7b",
@@ -27,11 +28,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 1292,
+    "latency": 749,
     "successBool": true,
-    "success": 56,
-    "total": 59,
-    "lastCheck": 1785611085
+    "success": 57,
+    "total": 60,
+    "lastCheck": 1785617220
   },
   {
     "id": "c17109079c4e977e",
@@ -42,12 +43,14 @@
     "countryName": "泰国",
     "uri": "vless://f55ce6cc-3f6b-40fc-9e3b-abe26db17009@18.239.134.69:80?encryption=none&security=none&type=ws&host=d2e1v87ko56lyw.cloudfront.net%3Aassets.opensignal.com&path=%2F#%5Bopenproxylist.com%5D%20TH%2015041299",
     "alias": "[openproxylist.com] TH 15041299",
-    "warning": [],
-    "latency": 4293,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 3054,
     "successBool": true,
-    "success": 38,
-    "total": 39,
-    "lastCheck": 1785611500
+    "success": 39,
+    "total": 40,
+    "lastCheck": 1785617629
   },
   {
     "id": "0469e3ffd187843f",
@@ -59,13 +62,13 @@
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.169:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DataCamp",
     "alias": "DataCamp",
     "warning": [
-      "noGooglePassing"
+      "notAvailableForNonSSLSites"
     ],
-    "latency": 13879,
+    "latency": 2441,
     "successBool": true,
-    "success": 39,
-    "total": 39,
-    "lastCheck": 1785611673
+    "success": 40,
+    "total": 40,
+    "lastCheck": 1785617778
   },
   {
     "id": "a041e1cf9935102e",
@@ -76,14 +79,12 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.181:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#",
     "alias": "",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 12394,
+    "warning": [],
+    "latency": 2501,
     "successBool": true,
-    "success": 38,
-    "total": 39,
-    "lastCheck": 1785611689
+    "success": 39,
+    "total": 40,
+    "lastCheck": 1785617785
   },
   {
     "id": "874f322c5b05e4a0",
@@ -95,11 +96,11 @@
     "uri": "vless://14b48651-3738-4926-bc09-4c04e87ff80b@static.lotussec.com:443?encryption=none&security=tls&sni=static.lotussec.com&fp=firefox&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=static.lotussec.com&path=%2FJoin-JavidnamanIran-on-Telegram&mode=stream-one&extra=%7B%22noGRPCHeader%22%3Atrue%2C%22xmux%22%3A%7B%22maxConcurrency%22%3A%226%22%2C%22hKeepAlivePeriod%22%3A12%7D%7D#",
     "alias": "",
     "warning": [],
-    "latency": 2039,
+    "latency": 1087,
     "successBool": true,
-    "success": 39,
-    "total": 39,
-    "lastCheck": 1785611746
+    "success": 40,
+    "total": 40,
+    "lastCheck": 1785617855
   },
   {
     "id": "039a1a8773475439",
@@ -111,29 +112,11 @@
     "uri": "vless://11e57eeb-ffdf-4983-a9fa-ad352dea7253@154.193.55.183:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4&sid=dbbe8dca27a92c35&type=tcp&headerType=none#082%20chicago%20datacenter%20node",
     "alias": "082 chicago datacenter node",
     "warning": [],
-    "latency": 580,
+    "latency": 433,
     "successBool": true,
-    "success": 39,
-    "total": 39,
-    "lastCheck": 1785611747
-  },
-  {
-    "id": "c37f43b6556f9c85",
-    "protocol": "vless",
-    "address": "dey.lnmarketplace.net",
-    "port": 443,
-    "country": "NL",
-    "countryName": "荷兰",
-    "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
-    "alias": "",
-    "warning": [
-      "notAvailableForNonSSLSites"
-    ],
-    "latency": 1282,
-    "successBool": true,
-    "success": 32,
-    "total": 39,
-    "lastCheck": 1785611796
+    "success": 40,
+    "total": 40,
+    "lastCheck": 1785617856
   },
   {
     "id": "1d106fe2610d814b",
@@ -147,11 +130,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 1907,
+    "latency": 1599,
     "successBool": true,
-    "success": 31,
-    "total": 39,
-    "lastCheck": 1785611960
+    "success": 32,
+    "total": 40,
+    "lastCheck": 1785618127
   },
   {
     "id": "09de10f6b4cba835",
@@ -163,11 +146,11 @@
     "uri": "vless://c7e9c591-2764-423a-afca-efbd010fd396@103.54.16.230:2053?encryption=none&security=tls&sni=forfreeuse.sub-flow.online&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=forfreeuse.sub-flow.online&path=%2F#",
     "alias": "",
     "warning": [],
-    "latency": 8098,
+    "latency": 4058,
     "successBool": true,
-    "success": 39,
-    "total": 39,
-    "lastCheck": 1785612321
+    "success": 40,
+    "total": 40,
+    "lastCheck": 1785618479
   },
   {
     "id": "7dfc0046c10692df",
@@ -178,12 +161,14 @@
     "countryName": "德国",
     "uri": "vless://179d3919-4e0f-40f1-836e-9a688ac2b0a8@de.unit-digital.com:443?encryption=none&security=reality&sni=www.intel.com&fp=edge&pbk=VnuqDFzedJka4uGk7uMHady2p48E_f-zqiZItFF2pEY&sid=b536806a&spx=%2F&type=grpc#027%20datacenter%20node",
     "alias": "027 datacenter node",
-    "warning": [],
-    "latency": 3846,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1243,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785612636
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785618677
   },
   {
     "id": "153c0e605e5ce96b",
@@ -195,11 +180,11 @@
     "uri": "vless://7216b4e8-e935-4d68-b959-73d145accdee@154.83.246.50:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8&sid=500aec9e9e5e2212&type=tcp&headerType=none#",
     "alias": "",
     "warning": [],
-    "latency": 1300,
+    "latency": 853,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785613788
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785619786
   },
   {
     "id": "200b6ae3e341e20d",
@@ -211,11 +196,11 @@
     "uri": "vless://0370b162-baff-4757-86cc-cce4bf07f6f1@78.111.89.171:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4&sid=cfe08c23a85f24&spx=%2Ffdded5f9698d939&type=tcp&headerType=none#US%20Node",
     "alias": "US Node",
     "warning": [],
-    "latency": 700,
+    "latency": 272,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785614059
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785620118
   },
   {
     "id": "97bda4abed11df06",
@@ -227,11 +212,11 @@
     "uri": "vless://e911c552-3a98-41e0-b5fb-0dd3879887b7@103.161.237.54:443?encryption=none&security=tls&sni=vod.ensf.top&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&host=vod.ensf.top&path=%2Fapi%2Fv1%2Firc#%C3%B0%C5%B8%E2%80%9D%C2%A5Join%2BTelegram%3A%40Farah_VPN%C3%B0%C5%B8%C5%B8%C2%A3",
     "alias": "ðŸ”¥Join+Telegram:@Farah_VPNðŸŸ£",
     "warning": [],
-    "latency": 4822,
+    "latency": 2013,
     "successBool": true,
-    "success": 20,
-    "total": 21,
-    "lastCheck": 1785614554
+    "success": 21,
+    "total": 22,
+    "lastCheck": 1785620590
   },
   {
     "id": "5e9eb577ae9945c4",
@@ -243,11 +228,11 @@
     "uri": "vless://c7e9c591-2764-423a-afca-efbd010fd396@195.133.94.188:2053?encryption=none&security=tls&sni=forfreeuse.sub-flow.online&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=forfreeuse.sub-flow.online&path=%2F#IPv4%20H2Nexus%20Ltd%20-%20FI%20Node%2C%20VLESS",
     "alias": "IPv4 H2Nexus Ltd - FI Node, VLESS",
     "warning": [],
-    "latency": 8953,
+    "latency": 4516,
     "successBool": true,
-    "success": 20,
-    "total": 21,
-    "lastCheck": 1785614924
+    "success": 21,
+    "total": 22,
+    "lastCheck": 1785620940
   },
   {
     "id": "c9ea49ecbd4ee0d0",
@@ -258,14 +243,12 @@
     "countryName": "德国",
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkJ5IEVicmFTaGEgXHVEODNEXHVEQzA5IiwNCiAgImFkZCI6ICJmajI2MDMwNi5mcmVlY2hhdHVwLmNvbSIsDQogICJwb3J0IjogIjI3NzI2IiwNCiAgImlkIjogIjk4ZTJiZTNjLThmODQtNGI4NS05OTZiLWI2OGRjYzJmYmNiNiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAidGNwIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImZqMjYwMzA2LmZyZWVjaGF0dXAuY29tIiwNCiAgInBhdGgiOiAiLyIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "By EbraSha 🐉",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 7472,
+    "warning": [],
+    "latency": 1645,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785615057
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785621060
   },
   {
     "id": "5f5492d92e4b29bf",
@@ -277,11 +260,11 @@
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkJ5IEVicmFTaGEgXHVEODNEXHVEQzUxIiwNCiAgImFkZCI6ICJmajI2MDIwNC5mcmVlY2hhdHVwLmNvbSIsDQogICJwb3J0IjogIjI3NzI2IiwNCiAgImlkIjogIjk4ZTJiZTNjLThmODQtNGI4NS05OTZiLWI2OGRjYzJmYmNiNiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAidGNwIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImZqMjYwMjA0LmZyZWVjaGF0dXAuY29tIiwNCiAgInBhdGgiOiAiLyIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "By EbraSha 👑",
     "warning": [],
-    "latency": 7731,
+    "latency": 2108,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785615065
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785621062
   },
   {
     "id": "b07c4667dafd9fd6",
@@ -293,11 +276,11 @@
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkZyYW5rZnVydCIsDQogICJhZGQiOiAiZmoyNjAzMDQuZnJlZWNoYXR1cC5jb20iLA0KICAicG9ydCI6ICIyNzcyNiIsDQogICJpZCI6ICI5OGUyYmUzYy04Zjg0LTRiODUtOTk2Yi1iNjhkY2MyZmJjYjYiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogInRjcCIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJmajI2MDMwNC5mcmVlY2hhdHVwLmNvbSIsDQogICJwYXRoIjogIi8iLA0KICAidGxzIjogIiIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiIsDQogICJpbnNlY3VyZSI6ICIwIg0KfQ==",
     "alias": "Frankfurt",
     "warning": [],
-    "latency": 4420,
+    "latency": 1603,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785615071
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785621064
   },
   {
     "id": "3ac4e3ea36b457cb",
@@ -309,11 +292,11 @@
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERGM1x1RDgzQ1x1RERGMVtvcGVucHJveHlsaXN0LmNvbV0gdm1lc3MtTkwiLA0KICAiYWRkIjogImFwamhkZ2d5eC5jb20iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWY3MmYxODAtYjIxYi00YjdhLTg0ODQtMjQwNzU5MDEyNjA0IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJhcGpoZGdneXguY29tIiwNCiAgInBhdGgiOiAiLzVmNzJmMTgwLWIyMWItNGI3YS04NDg0LTI0MDc1OTA5Njc4NSIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "🇳🇱[openproxylist.com] vmess-NL",
     "warning": [],
-    "latency": 4238,
+    "latency": 14736,
     "successBool": true,
-    "success": 20,
-    "total": 21,
-    "lastCheck": 1785615146
+    "success": 21,
+    "total": 22,
+    "lastCheck": 1785621153
   },
   {
     "id": "b449fee1b59ec0bf",
@@ -327,11 +310,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 5702,
+    "latency": 21861,
     "successBool": true,
-    "success": 21,
-    "total": 21,
-    "lastCheck": 1785615378
+    "success": 22,
+    "total": 22,
+    "lastCheck": 1785621417
   },
   {
     "id": "5ea3c9121a7771dd",
@@ -343,10 +326,10 @@
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIk1Y5YWL6Zu35aGU572XIiwNCiAgImFkZCI6ICJjaW5keTUwLmNlb2lpaS5jb20iLA0KICAicG9ydCI6ICIzNjgwMSIsDQogICJpZCI6ICJhNmFiNjUxMy02ZWMzLTMyN2YtYTA2OC1iODlmZTcyOTU0YjgiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImFqYXgubWljcm9zb2Z0LmNvbSIsDQogICJwYXRoIjogIi9obHMvY2N0djVwaGQubTN1OCIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "MX克雷塔罗",
     "warning": [],
-    "latency": 6793,
+    "latency": 8292,
     "successBool": true,
-    "success": 18,
-    "total": 21,
-    "lastCheck": 1785615546
+    "success": 19,
+    "total": 22,
+    "lastCheck": 1785621591
   }
 ]
