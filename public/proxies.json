@@ -8,12 +8,14 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.241:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DatacampTR",
     "alias": "DatacampTR",
-    "warning": [],
-    "latency": 1955,
+    "warning": [
+      "notAvailableForNonSSLSites"
+    ],
+    "latency": 2710,
     "successBool": true,
-    "success": 60,
-    "total": 72,
-    "lastCheck": 1785911018
+    "success": 61,
+    "total": 73,
+    "lastCheck": 1785925855
   },
   {
     "id": "1b5f296c21800b7b",
@@ -25,11 +27,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 578,
+    "latency": 4297,
     "successBool": true,
-    "success": 69,
-    "total": 72,
-    "lastCheck": 1785911089
+    "success": 70,
+    "total": 73,
+    "lastCheck": 1785925930
   },
   {
     "id": "0469e3ffd187843f",
@@ -41,11 +43,11 @@
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.169:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DataCamp",
     "alias": "DataCamp",
     "warning": [],
-    "latency": 1470,
+    "latency": 4051,
     "successBool": true,
-    "success": 52,
-    "total": 52,
-    "lastCheck": 1785911567
+    "success": 53,
+    "total": 53,
+    "lastCheck": 1785926460
   },
   {
     "id": "a041e1cf9935102e",
@@ -56,12 +58,14 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.181:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#",
     "alias": "",
-    "warning": [],
-    "latency": 2140,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 5574,
     "successBool": true,
-    "success": 51,
-    "total": 52,
-    "lastCheck": 1785911570
+    "success": 52,
+    "total": 53,
+    "lastCheck": 1785926468
   },
   {
     "id": "874f322c5b05e4a0",
@@ -72,14 +76,30 @@
     "countryName": "德国",
     "uri": "vless://14b48651-3738-4926-bc09-4c04e87ff80b@static.lotussec.com:443?encryption=none&security=tls&sni=static.lotussec.com&fp=firefox&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=static.lotussec.com&path=%2FJoin-JavidnamanIran-on-Telegram&mode=stream-one&extra=%7B%22noGRPCHeader%22%3Atrue%2C%22xmux%22%3A%7B%22maxConcurrency%22%3A%226%22%2C%22hKeepAlivePeriod%22%3A12%7D%7D#",
     "alias": "",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 11359,
+    "warning": [],
+    "latency": 1408,
     "successBool": true,
-    "success": 52,
-    "total": 52,
-    "lastCheck": 1785911653
+    "success": 53,
+    "total": 53,
+    "lastCheck": 1785926539
+  },
+  {
+    "id": "c37f43b6556f9c85",
+    "protocol": "vless",
+    "address": "dey.lnmarketplace.net",
+    "port": 443,
+    "country": "NL",
+    "countryName": "荷兰",
+    "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
+    "alias": "",
+    "warning": [
+      "notAvailableForNonSSLSites"
+    ],
+    "latency": 887,
+    "successBool": true,
+    "success": 40,
+    "total": 53,
+    "lastCheck": 1785926647
   },
   {
     "id": "1d106fe2610d814b",
@@ -93,11 +113,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 1579,
+    "latency": 2036,
     "successBool": true,
-    "success": 44,
-    "total": 52,
-    "lastCheck": 1785911997
+    "success": 45,
+    "total": 53,
+    "lastCheck": 1785926870
   },
   {
     "id": "5f40e1f7b5f79f40",
@@ -108,12 +128,14 @@
     "countryName": "芬兰",
     "uri": "vless://5e243126-4a2a-84b6-782a-73b14797fb5f@170.168.97.3:8443?encryption=none&security=reality&sni=download.nvidia.com&fp=chrome&pbk=D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs&type=grpc&authority=&serviceName=TunService&mode=gun#%F0%9F%86%94soskeynet%20%F0%9F%94%92%20VL-GRPC-%20%F0%9F%87%AB%F0%9F%87%AE%20FI",
     "alias": "🆔soskeynet 🔒 VL-GRPC- 🇫🇮 FI",
-    "warning": [],
-    "latency": 4942,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1670,
     "successBool": true,
-    "success": 32,
-    "total": 52,
-    "lastCheck": 1785912129
+    "success": 33,
+    "total": 53,
+    "lastCheck": 1785927003
   },
   {
     "id": "59a9d8250831cc89",
@@ -124,12 +146,15 @@
     "countryName": "芬兰",
     "uri": "vless://0a76a766-d141-44b8-944e-dff757d7116f@163.5.153.153:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.samsung.com&fp=chrome&pbk=aB_2Tcf0A5LoiIEZHztR_l-ZOFeJKxYRH67s_OVQ9C0&sid=a91045bc&type=tcp&headerType=none#",
     "alias": "",
-    "warning": [],
-    "latency": 943,
+    "warning": [
+      "noGooglePassing",
+      "notAvailableForNonSSLSites"
+    ],
+    "latency": 7512,
     "successBool": true,
-    "success": 32,
-    "total": 52,
-    "lastCheck": 1785912292
+    "success": 33,
+    "total": 53,
+    "lastCheck": 1785927210
   },
   {
     "id": "200b6ae3e341e20d",
@@ -141,11 +166,11 @@
     "uri": "vless://0370b162-baff-4757-86cc-cce4bf07f6f1@78.111.89.171:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4&sid=cfe08c23a85f24&spx=%2Ffdded5f9698d939&type=tcp&headerType=none#US%20Node",
     "alias": "US Node",
     "warning": [],
-    "latency": 500,
+    "latency": 209,
     "successBool": true,
-    "success": 30,
-    "total": 34,
-    "lastCheck": 1785913955
+    "success": 31,
+    "total": 35,
+    "lastCheck": 1785928994
   },
   {
     "id": "97bda4abed11df06",
@@ -157,11 +182,11 @@
     "uri": "vless://e911c552-3a98-41e0-b5fb-0dd3879887b7@103.161.237.54:443?encryption=none&security=tls&sni=vod.ensf.top&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&host=vod.ensf.top&path=%2Fapi%2Fv1%2Firc#%C3%B0%C5%B8%E2%80%9D%C2%A5Join%2BTelegram%3A%40Farah_VPN%C3%B0%C5%B8%C5%B8%C2%A3",
     "alias": "ðŸ”¥Join+Telegram:@Farah_VPNðŸŸ£",
     "warning": [],
-    "latency": 6016,
+    "latency": 2039,
     "successBool": true,
-    "success": 31,
-    "total": 34,
-    "lastCheck": 1785914458
+    "success": 32,
+    "total": 35,
+    "lastCheck": 1785929452
   },
   {
     "id": "d3c4c5100be06d10",
@@ -173,11 +198,11 @@
     "uri": "vless://b55a6115-07f5-4464-85b5-7059ce4701f3@109.104.106.140:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=d2-ro.cloud-cdn.xyz&fp=edge&pbk=6HRVYg1i4ah9VhuV5hne2-JA8Z5HTV5jbFi-h3qKsDQ&sid=dd4d615422c6424c&spx=%2F&type=tcp&headerType=none#%E7%BE%85%E9%A6%AC%E5%B0%BC%E4%BA%9E%E7%AF%80%E9%BB%9E",
     "alias": "羅馬尼亞節點",
     "warning": [],
-    "latency": 1197,
+    "latency": 1009,
     "successBool": true,
-    "success": 1,
-    "total": 34,
-    "lastCheck": 1785914642
+    "success": 2,
+    "total": 35,
+    "lastCheck": 1785929636
   },
   {
     "id": "c9ea49ecbd4ee0d0",
@@ -188,14 +213,12 @@
     "countryName": "德国",
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkJ5IEVicmFTaGEgXHVEODNEXHVEQzA5IiwNCiAgImFkZCI6ICJmajI2MDMwNi5mcmVlY2hhdHVwLmNvbSIsDQogICJwb3J0IjogIjI3NzI2IiwNCiAgImlkIjogIjk4ZTJiZTNjLThmODQtNGI4NS05OTZiLWI2OGRjYzJmYmNiNiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAidGNwIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImZqMjYwMzA2LmZyZWVjaGF0dXAuY29tIiwNCiAgInBhdGgiOiAiLyIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "By EbraSha 🐉",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 10183,
+    "warning": [],
+    "latency": 14538,
     "successBool": true,
-    "success": 34,
-    "total": 34,
-    "lastCheck": 1785915173
+    "success": 35,
+    "total": 35,
+    "lastCheck": 1785930108
   },
   {
     "id": "5f5492d92e4b29bf",
@@ -206,14 +229,12 @@
     "countryName": "德国",
     "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkJ5IEVicmFTaGEgXHVEODNEXHVEQzUxIiwNCiAgImFkZCI6ICJmajI2MDIwNC5mcmVlY2hhdHVwLmNvbSIsDQogICJwb3J0IjogIjI3NzI2IiwNCiAgImlkIjogIjk4ZTJiZTNjLThmODQtNGI4NS05OTZiLWI2OGRjYzJmYmNiNiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAidGNwIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImZqMjYwMjA0LmZyZWVjaGF0dXAuY29tIiwNCiAgInBhdGgiOiAiLyIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
     "alias": "By EbraSha 👑",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 20721,
+    "warning": [],
+    "latency": 13975,
     "successBool": true,
-    "success": 34,
-    "total": 34,
-    "lastCheck": 1785915205
+    "success": 35,
+    "total": 35,
+    "lastCheck": 1785930125
   },
   {
     "id": "b07c4667dafd9fd6",
@@ -227,11 +248,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 34846,
+    "latency": 25605,
     "successBool": true,
-    "success": 34,
-    "total": 34,
-    "lastCheck": 1785915241
+    "success": 35,
+    "total": 35,
+    "lastCheck": 1785930152
   },
   {
     "id": "3ac4e3ea36b457cb",
@@ -245,28 +266,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 36402,
+    "latency": 33406,
     "successBool": true,
-    "success": 33,
-    "total": 34,
-    "lastCheck": 1785915354
-  },
-  {
-    "id": "b449fee1b59ec0bf",
-    "protocol": "vmess",
-    "address": "fj260403.freechatup.com",
-    "port": 27726,
-    "country": "DE",
-    "countryName": "德国",
-    "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERFOVx1RDgzQ1x1RERFQSBKb2luK1RlbGVncmFtOkBGYXJhaF9WUE4gXHVEODNDXHVEREU5XHVEODNDXHVEREVBIiwNCiAgImFkZCI6ICJmajI2MDQwMy5mcmVlY2hhdHVwLmNvbSIsDQogICJwb3J0IjogIjI3NzI2IiwNCiAgImlkIjogIjk4ZTJiZTNjLThmODQtNGI4NS05OTZiLWI2OGRjYzJmYmNiNiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAidGNwIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImZqMjYwNDAzLmZyZWVjaGF0dXAuY29tIiwNCiAgInBhdGgiOiAiLyIsDQogICJ0bHMiOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
-    "alias": "🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 20044,
-    "successBool": true,
-    "success": 33,
-    "total": 34,
-    "lastCheck": 1785915570
+    "success": 34,
+    "total": 35,
+    "lastCheck": 1785930261
   }
 ]
