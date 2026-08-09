@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 555,
+    "latency": 1797,
     "successBool": true,
-    "success": 101,
-    "total": 104,
-    "lastCheck": 1786300487
+    "success": 102,
+    "total": 105,
+    "lastCheck": 1786307315
   },
   {
     "id": "0469e3ffd187843f",
@@ -24,14 +24,12 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.169:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DataCamp",
     "alias": "DataCamp",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 7628,
+    "warning": [],
+    "latency": 3008,
     "successBool": true,
-    "success": 82,
-    "total": 84,
-    "lastCheck": 1786301020
+    "success": 83,
+    "total": 85,
+    "lastCheck": 1786307852
   },
   {
     "id": "a041e1cf9935102e",
@@ -45,11 +43,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 6072,
+    "latency": 13105,
     "successBool": true,
-    "success": 80,
-    "total": 84,
-    "lastCheck": 1786301029
+    "success": 81,
+    "total": 85,
+    "lastCheck": 1786307868
   },
   {
     "id": "c37f43b6556f9c85",
@@ -60,14 +58,30 @@
     "countryName": "荷兰",
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
+    "warning": [],
+    "latency": 1303,
+    "successBool": true,
+    "success": 67,
+    "total": 85,
+    "lastCheck": 1786308054
+  },
+  {
+    "id": "200b6ae3e341e20d",
+    "protocol": "vless",
+    "address": "78.111.89.171",
+    "port": 443,
+    "country": "US",
+    "countryName": "美国",
+    "uri": "vless://0370b162-baff-4757-86cc-cce4bf07f6f1@78.111.89.171:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4&sid=cfe08c23a85f24&spx=%2Ffdded5f9698d939&type=tcp&headerType=none#US%20Node",
+    "alias": "US Node",
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 1539,
+    "latency": 18624,
     "successBool": true,
-    "success": 66,
-    "total": 84,
-    "lastCheck": 1786301211
+    "success": 61,
+    "total": 67,
+    "lastCheck": 1786310552
   },
   {
     "id": "97bda4abed11df06",
@@ -78,14 +92,12 @@
     "countryName": "阿富汗",
     "uri": "vless://e911c552-3a98-41e0-b5fb-0dd3879887b7@103.161.237.54:443?encryption=none&security=tls&sni=vod.ensf.top&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&host=vod.ensf.top&path=%2Fapi%2Fv1%2Firc#%C3%B0%C5%B8%E2%80%9D%C2%A5Join%2BTelegram%3A%40Farah_VPN%C3%B0%C5%B8%C5%B8%C2%A3",
     "alias": "ðŸ”¥Join+Telegram:@Farah_VPNðŸŸ£",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 14868,
+    "warning": [],
+    "latency": 2603,
     "successBool": true,
-    "success": 63,
-    "total": 66,
-    "lastCheck": 1786304170
+    "success": 64,
+    "total": 67,
+    "lastCheck": 1786311084
   },
   {
     "id": "3ac4e3ea36b457cb",
@@ -99,10 +111,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 34798,
+    "latency": 32275,
     "successBool": true,
-    "success": 63,
-    "total": 66,
-    "lastCheck": 1786305099
+    "success": 64,
+    "total": 67,
+    "lastCheck": 1786311997
   }
 ]
