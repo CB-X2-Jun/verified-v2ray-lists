@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 2765,
+    "latency": 555,
     "successBool": true,
-    "success": 100,
-    "total": 103,
-    "lastCheck": 1786279320
+    "success": 101,
+    "total": 104,
+    "lastCheck": 1786300487
   },
   {
     "id": "0469e3ffd187843f",
@@ -24,12 +24,14 @@
     "countryName": "土耳其",
     "uri": "vless://f75814f6-8f81-4847-b792-168c41f2dc85@45.196.201.169:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=storage.yandex.net&fp=firefox&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&sid=c6ef72e4635d15a5&type=tcp&headerType=none#DataCamp",
     "alias": "DataCamp",
-    "warning": [],
-    "latency": 2377,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 7628,
     "successBool": true,
-    "success": 81,
-    "total": 83,
-    "lastCheck": 1786279866
+    "success": 82,
+    "total": 84,
+    "lastCheck": 1786301020
   },
   {
     "id": "a041e1cf9935102e",
@@ -43,11 +45,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 6208,
+    "latency": 6072,
     "successBool": true,
-    "success": 79,
-    "total": 83,
-    "lastCheck": 1786279873
+    "success": 80,
+    "total": 84,
+    "lastCheck": 1786301029
   },
   {
     "id": "c37f43b6556f9c85",
@@ -58,12 +60,14 @@
     "countryName": "荷兰",
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
-    "warning": [],
-    "latency": 791,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1539,
     "successBool": true,
-    "success": 65,
-    "total": 83,
-    "lastCheck": 1786280057
+    "success": 66,
+    "total": 84,
+    "lastCheck": 1786301211
   },
   {
     "id": "97bda4abed11df06",
@@ -74,11 +78,31 @@
     "countryName": "阿富汗",
     "uri": "vless://e911c552-3a98-41e0-b5fb-0dd3879887b7@103.161.237.54:443?encryption=none&security=tls&sni=vod.ensf.top&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&host=vod.ensf.top&path=%2Fapi%2Fv1%2Firc#%C3%B0%C5%B8%E2%80%9D%C2%A5Join%2BTelegram%3A%40Farah_VPN%C3%B0%C5%B8%C5%B8%C2%A3",
     "alias": "ðŸ”¥Join+Telegram:@Farah_VPNðŸŸ£",
-    "warning": [],
-    "latency": 2276,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 14868,
     "successBool": true,
-    "success": 62,
-    "total": 65,
-    "lastCheck": 1786283051
+    "success": 63,
+    "total": 66,
+    "lastCheck": 1786304170
+  },
+  {
+    "id": "3ac4e3ea36b457cb",
+    "protocol": "vmess",
+    "address": "apjhdggyx.com",
+    "port": 443,
+    "country": "NL",
+    "countryName": "荷兰",
+    "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERGM1x1RDgzQ1x1RERGMVtvcGVucHJveHlsaXN0LmNvbV0gdm1lc3MtTkwiLA0KICAiYWRkIjogImFwamhkZ2d5eC5jb20iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWY3MmYxODAtYjIxYi00YjdhLTg0ODQtMjQwNzU5MDEyNjA0IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJhcGpoZGdneXguY29tIiwNCiAgInBhdGgiOiAiLzVmNzJmMTgwLWIyMWItNGI3YS04NDg0LTI0MDc1OTA5Njc4NSIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
+    "alias": "🇳🇱[openproxylist.com] vmess-NL",
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 34798,
+    "successBool": true,
+    "success": 63,
+    "total": 66,
+    "lastCheck": 1786305099
   }
 ]
