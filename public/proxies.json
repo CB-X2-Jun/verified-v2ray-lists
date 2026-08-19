@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 567,
+    "latency": 551,
     "successBool": true,
-    "success": 187,
-    "total": 190,
-    "lastCheck": 1787121386
+    "success": 188,
+    "total": 191,
+    "lastCheck": 1787135070
   },
   {
     "id": "c37f43b6556f9c85",
@@ -25,11 +25,11 @@
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
     "warning": [],
-    "latency": 4098,
+    "latency": 918,
     "successBool": true,
-    "success": 144,
-    "total": 170,
-    "lastCheck": 1787122139
+    "success": 145,
+    "total": 171,
+    "lastCheck": 1787135833
   },
   {
     "id": "200b6ae3e341e20d",
@@ -41,11 +41,11 @@
     "uri": "vless://0370b162-baff-4757-86cc-cce4bf07f6f1@78.111.89.171:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4&sid=cfe08c23a85f24&spx=%2Ffdded5f9698d939&type=tcp&headerType=none#US%20Node",
     "alias": "US Node",
     "warning": [],
-    "latency": 1286,
+    "latency": 284,
     "successBool": true,
-    "success": 146,
-    "total": 152,
-    "lastCheck": 1787124507
+    "success": 147,
+    "total": 153,
+    "lastCheck": 1787138250
   },
   {
     "id": "3ac4e3ea36b457cb",
@@ -59,10 +59,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 38324,
+    "latency": 38046,
     "successBool": true,
-    "success": 141,
-    "total": 152,
-    "lastCheck": 1787125954
+    "success": 142,
+    "total": 153,
+    "lastCheck": 1787139686
   }
 ]
