@@ -8,12 +8,14 @@
     "countryName": "法国",
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
-    "warning": [],
-    "latency": 8681,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 38211,
     "successBool": true,
-    "success": 216,
-    "total": 219,
-    "lastCheck": 1787437118
+    "success": 217,
+    "total": 220,
+    "lastCheck": 1787454047
   },
   {
     "id": "c37f43b6556f9c85",
@@ -25,11 +27,27 @@
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
     "warning": [],
-    "latency": 1207,
+    "latency": 992,
     "successBool": true,
-    "success": 173,
-    "total": 199,
-    "lastCheck": 1787437873
+    "success": 174,
+    "total": 200,
+    "lastCheck": 1787454810
+  },
+  {
+    "id": "200b6ae3e341e20d",
+    "protocol": "vless",
+    "address": "78.111.89.171",
+    "port": 443,
+    "country": "US",
+    "countryName": "美国",
+    "uri": "vless://0370b162-baff-4757-86cc-cce4bf07f6f1@78.111.89.171:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4&sid=cfe08c23a85f24&spx=%2Ffdded5f9698d939&type=tcp&headerType=none#US%20Node",
+    "alias": "US Node",
+    "warning": [],
+    "latency": 5950,
+    "successBool": true,
+    "success": 170,
+    "total": 182,
+    "lastCheck": 1787457165
   },
   {
     "id": "97bda4abed11df06",
@@ -43,11 +61,11 @@
     "warning": [
       "notAvailableForNonSSLSites"
     ],
-    "latency": 2653,
+    "latency": 2089,
     "successBool": true,
-    "success": 167,
-    "total": 181,
-    "lastCheck": 1787440773
+    "success": 168,
+    "total": 182,
+    "lastCheck": 1787457622
   },
   {
     "id": "3ac4e3ea36b457cb",
@@ -61,10 +79,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 37486,
+    "latency": 36520,
     "successBool": true,
-    "success": 169,
-    "total": 181,
-    "lastCheck": 1787441762
+    "success": 170,
+    "total": 182,
+    "lastCheck": 1787458598
   }
 ]
