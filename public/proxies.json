@@ -1,21 +1,5 @@
 [
   {
-    "id": "1b5f296c21800b7b",
-    "protocol": "vless",
-    "address": "2001:bc8:32d7:302::10",
-    "port": 65513,
-    "country": "FR",
-    "countryName": "法国",
-    "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
-    "alias": "22-FR",
-    "warning": [],
-    "latency": 3994,
-    "successBool": true,
-    "success": 219,
-    "total": 222,
-    "lastCheck": 1787473481
-  },
-  {
     "id": "c37f43b6556f9c85",
     "protocol": "vless",
     "address": "dey.lnmarketplace.net",
@@ -25,11 +9,11 @@
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
     "warning": [],
-    "latency": 4886,
+    "latency": 1434,
     "successBool": true,
-    "success": 176,
-    "total": 202,
-    "lastCheck": 1787474217
+    "success": 177,
+    "total": 203,
+    "lastCheck": 1787489108
   },
   {
     "id": "200b6ae3e341e20d",
@@ -40,14 +24,12 @@
     "countryName": "美国",
     "uri": "vless://0370b162-baff-4757-86cc-cce4bf07f6f1@78.111.89.171:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4&sid=cfe08c23a85f24&spx=%2Ffdded5f9698d939&type=tcp&headerType=none#US%20Node",
     "alias": "US Node",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 16279,
+    "warning": [],
+    "latency": 688,
     "successBool": true,
-    "success": 172,
-    "total": 184,
-    "lastCheck": 1787476638
+    "success": 173,
+    "total": 185,
+    "lastCheck": 1787491531
   },
   {
     "id": "97bda4abed11df06",
@@ -61,28 +43,10 @@
     "warning": [
       "notAvailableForNonSSLSites"
     ],
-    "latency": 2184,
+    "latency": 2858,
     "successBool": true,
-    "success": 170,
-    "total": 184,
-    "lastCheck": 1787477120
-  },
-  {
-    "id": "3ac4e3ea36b457cb",
-    "protocol": "vmess",
-    "address": "apjhdggyx.com",
-    "port": 443,
-    "country": "NL",
-    "countryName": "荷兰",
-    "uri": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERGM1x1RDgzQ1x1RERGMVtvcGVucHJveHlsaXN0LmNvbV0gdm1lc3MtTkwiLA0KICAiYWRkIjogImFwamhkZ2d5eC5jb20iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNWY3MmYxODAtYjIxYi00YjdhLTg0ODQtMjQwNzU5MDEyNjA0IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJhcGpoZGdneXguY29tIiwNCiAgInBhdGgiOiAiLzVmNzJmMTgwLWIyMWItNGI3YS04NDg0LTI0MDc1OTA5Njc4NSIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9",
-    "alias": "🇳🇱[openproxylist.com] vmess-NL",
-    "warning": [
-      "noGooglePassing"
-    ],
-    "latency": 36241,
-    "successBool": true,
-    "success": 172,
-    "total": 184,
-    "lastCheck": 1787478153
+    "success": 171,
+    "total": 185,
+    "lastCheck": 1787492019
   }
 ]
