@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 13198,
+    "latency": 3994,
     "successBool": true,
-    "success": 218,
-    "total": 221,
-    "lastCheck": 1787459612
+    "success": 219,
+    "total": 222,
+    "lastCheck": 1787473481
   },
   {
     "id": "c37f43b6556f9c85",
@@ -25,11 +25,11 @@
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
     "warning": [],
-    "latency": 1194,
+    "latency": 4886,
     "successBool": true,
-    "success": 175,
-    "total": 201,
-    "lastCheck": 1787460353
+    "success": 176,
+    "total": 202,
+    "lastCheck": 1787474217
   },
   {
     "id": "200b6ae3e341e20d",
@@ -43,11 +43,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 7779,
+    "latency": 16279,
     "successBool": true,
-    "success": 171,
-    "total": 183,
-    "lastCheck": 1787462717
+    "success": 172,
+    "total": 184,
+    "lastCheck": 1787476638
   },
   {
     "id": "97bda4abed11df06",
@@ -61,11 +61,11 @@
     "warning": [
       "notAvailableForNonSSLSites"
     ],
-    "latency": 2396,
+    "latency": 2184,
     "successBool": true,
-    "success": 169,
-    "total": 183,
-    "lastCheck": 1787463206
+    "success": 170,
+    "total": 184,
+    "lastCheck": 1787477120
   },
   {
     "id": "3ac4e3ea36b457cb",
@@ -79,10 +79,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 20941,
+    "latency": 36241,
     "successBool": true,
-    "success": 171,
-    "total": 183,
-    "lastCheck": 1787464187
+    "success": 172,
+    "total": 184,
+    "lastCheck": 1787478153
   }
 ]
