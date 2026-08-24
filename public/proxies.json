@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 4620,
+    "latency": 5110,
     "successBool": true,
-    "success": 224,
-    "total": 228,
-    "lastCheck": 1787533267
+    "success": 225,
+    "total": 229,
+    "lastCheck": 1787540451
   },
   {
     "id": "c37f43b6556f9c85",
@@ -27,11 +27,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 1434,
+    "latency": 1189,
     "successBool": true,
-    "success": 182,
-    "total": 208,
-    "lastCheck": 1787533991
+    "success": 183,
+    "total": 209,
+    "lastCheck": 1787541149
   },
   {
     "id": "200b6ae3e341e20d",
@@ -45,11 +45,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 28170,
+    "latency": 261,
     "successBool": true,
-    "success": 178,
-    "total": 190,
-    "lastCheck": 1787536497
+    "success": 179,
+    "total": 191,
+    "lastCheck": 1787543500
   },
   {
     "id": "97bda4abed11df06",
@@ -63,10 +63,10 @@
     "warning": [
       "notAvailableForNonSSLSites"
     ],
-    "latency": 3727,
+    "latency": 1959,
     "successBool": true,
-    "success": 176,
-    "total": 190,
-    "lastCheck": 1787536995
+    "success": 177,
+    "total": 191,
+    "lastCheck": 1787543988
   }
 ]
