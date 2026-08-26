@@ -9,11 +9,11 @@
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
     "warning": [],
-    "latency": 2892,
+    "latency": 4794,
     "successBool": true,
-    "success": 204,
-    "total": 230,
-    "lastCheck": 1787741153
+    "success": 205,
+    "total": 231,
+    "lastCheck": 1787763580
   },
   {
     "id": "200b6ae3e341e20d",
@@ -27,11 +27,11 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 5774,
+    "latency": 8052,
     "successBool": true,
-    "success": 198,
-    "total": 212,
-    "lastCheck": 1787743533
+    "success": 199,
+    "total": 213,
+    "lastCheck": 1787766165
   },
   {
     "id": "97bda4abed11df06",
@@ -43,12 +43,13 @@
     "uri": "vless://e911c552-3a98-41e0-b5fb-0dd3879887b7@103.161.237.54:443?encryption=none&security=tls&sni=vod.ensf.top&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&host=vod.ensf.top&path=%2Fapi%2Fv1%2Firc#%C3%B0%C5%B8%E2%80%9D%C2%A5Join%2BTelegram%3A%40Farah_VPN%C3%B0%C5%B8%C5%B8%C2%A3",
     "alias": "ðŸ”¥Join+Telegram:@Farah_VPNðŸŸ£",
     "warning": [
+      "noGooglePassing",
       "notAvailableForNonSSLSites"
     ],
-    "latency": 2298,
+    "latency": 3166,
     "successBool": true,
-    "success": 197,
-    "total": 212,
-    "lastCheck": 1787744011
+    "success": 198,
+    "total": 213,
+    "lastCheck": 1787766816
   }
 ]
