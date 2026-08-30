@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 550,
+    "latency": 1253,
     "successBool": true,
-    "success": 241,
-    "total": 261,
-    "lastCheck": 1788041742
+    "success": 242,
+    "total": 262,
+    "lastCheck": 1788059854
   },
   {
     "id": "c37f43b6556f9c85",
@@ -25,10 +25,10 @@
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
     "warning": [],
-    "latency": 1621,
+    "latency": 1422,
     "successBool": true,
-    "success": 215,
-    "total": 241,
-    "lastCheck": 1788042571
+    "success": 216,
+    "total": 242,
+    "lastCheck": 1788060675
   }
 ]
