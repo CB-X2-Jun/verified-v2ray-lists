@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 855,
+    "latency": 978,
     "successBool": true,
-    "success": 281,
-    "total": 301,
-    "lastCheck": 1789078506
+    "success": 282,
+    "total": 302,
+    "lastCheck": 1789164690
   },
   {
     "id": "c37f43b6556f9c85",
@@ -24,12 +24,14 @@
     "countryName": "荷兰",
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
-    "warning": [],
-    "latency": 1183,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1780,
     "successBool": true,
-    "success": 255,
-    "total": 281,
-    "lastCheck": 1789079372
+    "success": 256,
+    "total": 282,
+    "lastCheck": 1789165519
   },
   {
     "id": "200b6ae3e341e20d",
@@ -43,10 +45,10 @@
     "warning": [
       "noGooglePassing"
     ],
-    "latency": 1513,
+    "latency": 1556,
     "successBool": true,
-    "success": 237,
-    "total": 263,
-    "lastCheck": 1789081585
+    "success": 238,
+    "total": 264,
+    "lastCheck": 1789167940
   }
 ]
