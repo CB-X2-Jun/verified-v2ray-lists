@@ -9,11 +9,11 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 1384,
+    "latency": 911,
     "successBool": true,
-    "success": 374,
-    "total": 394,
-    "lastCheck": 1793752125
+    "success": 375,
+    "total": 395,
+    "lastCheck": 1793814315
   },
   {
     "id": "c37f43b6556f9c85",
@@ -24,11 +24,29 @@
     "countryName": "荷兰",
     "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
     "alias": "",
-    "warning": [],
-    "latency": 1201,
+    "warning": [
+      "noGooglePassing"
+    ],
+    "latency": 1192,
     "successBool": true,
-    "success": 348,
-    "total": 374,
-    "lastCheck": 1793752939
+    "success": 349,
+    "total": 375,
+    "lastCheck": 1793815127
+  },
+  {
+    "id": "c6b9be81c5342f7f",
+    "protocol": "vless",
+    "address": "mg1.ainivp.com",
+    "port": 443,
+    "country": "US",
+    "countryName": "美国",
+    "uri": "vless://9227afcd-026e-781f-1abc-c06efabd2338@mg1.ainivp.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=epgveXEcUs0sbs4jV_1KldTkZGnWUHfMKcs0XNyP41Y&sid=a1b2c3d4&type=tcp&headerType=none&host=www.microsoft.com#%E5%8A%A0%E5%B7%9ERedondo%20Beach",
+    "alias": "加州Redondo Beach",
+    "warning": [],
+    "latency": 930,
+    "successBool": true,
+    "success": 1,
+    "total": 357,
+    "lastCheck": 1793819143
   }
 ]
