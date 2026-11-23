@@ -9,26 +9,10 @@
     "uri": "vless://2567e2e0-8d4c-4c51-aee9-5d1f36024472@[2001:bc8:32d7:302::10]:65513?encryption=none&security=reality&sni=www.yahoo.com&fp=chrome&pbk=tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg&sid=21569dd6&type=xhttp&path=%2F6eg3r4an#22-FR",
     "alias": "22-FR",
     "warning": [],
-    "latency": 1412,
+    "latency": 839,
     "successBool": true,
-    "success": 414,
-    "total": 434,
-    "lastCheck": 1795379926
-  },
-  {
-    "id": "c37f43b6556f9c85",
-    "protocol": "vless",
-    "address": "dey.lnmarketplace.net",
-    "port": 443,
-    "country": "NL",
-    "countryName": "荷兰",
-    "uri": "vless://3536e1fa-0850-44d1-b123-925ce12476cf@dey.lnmarketplace.net:443?encryption=none&security=tls&sni=dey.lnmarketplace.net&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&host=dey.lnmarketplace.net&path=%2Fkavir&mode=stream-one#",
-    "alias": "",
-    "warning": [],
-    "latency": 1629,
-    "successBool": true,
-    "success": 384,
-    "total": 414,
-    "lastCheck": 1795380825
+    "success": 415,
+    "total": 435,
+    "lastCheck": 1795399939
   }
 ]
